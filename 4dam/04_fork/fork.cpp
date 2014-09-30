@@ -4,10 +4,12 @@
 
 int main(int argc, char *argv[]){
 
-    for(int i=0; i<3; i++){
-	printf("HelloWorld\n");
-	fork();
-	printf("Hi ");
+    int variable;
+
+    for(int i=0; i<2; i++){
+	printf("Padre %d.\n", getpid());
+	variable = fork();
+	printf("Hijo %d.\n", getpid());
     }
     printf("\n");
     return EXIT_SUCCESS;
