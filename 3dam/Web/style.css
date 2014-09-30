@@ -1,0 +1,331 @@
+* { 
+	text-indent:0px; 
+	margin:0px; 
+	padding:0px; 
+	border:0px;
+}
+a {
+	font-size: 16px;
+	color: #000000;
+	text-decoration: none;
+}
+a:link {
+	
+}
+a:visited { 
+	color: #999999;
+}
+a:hover {  
+	color: #333333;
+}
+body {
+	text-align: center;
+	background-color: #282828;
+	color: inherit;
+}
+#global {
+	width: 1200px;
+	margin: 4px auto; 
+}
+#top{
+	background-color: #4f4f4f;
+	height: 55px;
+	margin: 0px 0px 2px 0px;
+}
+.header {
+	float: left;
+	margin-left: 120px;
+}
+.top-navigation{
+	width: 600px;
+	height: 55px;
+	border: none;
+	border: 0px;
+	margin: 0px 100px 0px 500px;
+	padding: 0px;
+	font-family: verdana,geneva,arial,helvetica,sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #8e8e8e;
+}
+.top-navigation ul{
+	background:url(images/top-navigation-bg.gif) top left repeat-x;
+	height:55px;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.top-navigation li{
+	float:left;
+	padding:0px 8px 0px 8px;
+}
+.top-navigation li a{
+	color:#ffffff;
+	display:block;
+	font-weight:bold;
+	font-size: 12px;
+	line-height:55px;
+	padding:0px 10px;
+	text-align:center;
+	text-decoration:none;
+}
+.top-navigation li a:hover{
+	color:#000000;
+	text-decoration:none;
+}
+.current {
+	background: url("images/top-navigation-button.gif") center no-repeat;
+}
+.top-navigation li ul{
+	background:#6b6b6b;
+	border-left:1px #000000 solid;
+	border-right:1px #000000 solid;
+	border-bottom:1px #000000 solid;
+	display:none;
+	height:auto;
+	filter:alpha(opacity=95);
+	opacity:0.95;
+	position:absolute;
+	width:200px;
+	z-index:200;
+}
+.top-navigation li:hover ul{
+	display:block;
+}
+.top-navigation li li {
+	display:block;
+	float:none;
+	padding:0px;
+	width:200px;
+}
+.liborder{
+	border-bottom: 1px #ffffff dashed;
+}
+.top-navigation li ul a{
+	display:block;
+	font-size:11px;
+	font-style:normal;
+	padding:0px 10px 0px 15px;
+	text-align:left;
+}
+.top-navigation li ul a:hover{
+	background:#949494;
+	color:#000000;
+	opacity:1.0;
+	filter:alpha(opacity=100);
+}
+.top-navigation p{
+	clear:left;
+}	
+.top-navigation #current{
+	background-image: url(imagenes/current-on.gif) top left repeat-x;
+	color:#ffffff;
+}
+#banner{
+	background-image: url(images/banner-background.gif);
+	background-color: #ffffff;
+	height: 386px;
+	margin: 0px 0px 0px 0px;
+}
+.banner-text{
+	float: right;
+	text-align: left;
+	margin: 0px 0px 0px 725px;
+}
+.banner-text h2 {
+	font-size: 40px;
+	padding: 20px 0px 20px 0px;
+}
+.banner-text p {
+	font-family: verdana,geneva,arial,helvetica,sans-serif;
+	font-size: 12px;
+	margin: 0px 75px 20px 0px;
+}
+.banner-text h3 {
+	background: url("images/banner-h3back.gif") no-repeat;
+	width: 198px;
+	height: 54px;
+	text-align: center;
+	padding: 15px 0px 0px 0px;
+}
+.banner-text h3 a {
+	font-size: 18px;
+	color: #ffffff;
+}
+.banner-text h3 a:hover {
+	color: #666666;
+}
+#blogs{
+	width: 1200px;
+	height: 650px;
+	background-color: #e1dddd;
+}
+#blog-left-background {
+	float: left;
+	background-color: #fff;
+	margin: 0px 0px 0px 130px;
+}
+.blog-left{
+	height: 700px;
+	margin: -40px 0px 0px 0px;
+}
+.blog-left-bannertop {
+	witdth: 451px;
+	height: 65px;
+	background: url("images/blog-left-bannertop.png") left no-repeat;
+	text-align: left;
+	margin: 0px 0px 0px 30px;
+}
+.blog-left-bannertop h3 {
+	color: #0000FF;
+	padding: 20px 0px 0px 30px;
+}
+.blog-left-banner a {
+	color: #00F00F;
+}
+.blog-left-bannertop-button1 {
+	width: 28px;
+	height: 28px;
+	background: url("images/blog-left-bannertop-button1-1.gif") center no-repeat;
+	padding: 10px 14px 10px 14px;
+	margin: 0px 5px 0px 130px;
+}
+.blog-left-bannertop-button1:hover {
+	background: url("images/blog-left-bannertop-button1-2.gif") center no-repeat;
+}
+.blog-left-bannertop-button2 {
+	width: 28px;
+	height: 28px;
+	background: url("images/blog-left-bannertop-button2-1.gif") center no-repeat;
+	padding: 10px 14px 10px 14px;
+	margin: 0px 5px 0px 0px;
+}
+.blog-left-bannertop-button2:hover {
+	background: url("images/blog-left-bannertop-button2-2.gif") center no-repeat;
+}
+.blog-left-post {
+	margin: 5px 0px 0px 10px;
+}
+.blog-left-post img{
+	margin: 0px 15px 0px 10px;
+}
+.blog-left-post h4{
+	font-size: 17px;
+	padding: 10px 0px 0px 0px;
+}
+.blog-left-post h5{
+	font-size: 11px;
+	padding: 10px 0px 0px 0px;
+	color: #CCC;
+}
+.blog-left-post p{
+	font-size: 13.5px;
+	padding: 10px 0px 0px 0px;
+	color: #666;
+}
+.blog-left-post-readmore{
+	padding: 15px 0px 0px 0px;
+}
+.blog-right{
+	height: 650px;
+	text-align: left;
+	margin: 0px 0px 0px -100px;
+}
+.blog-right h3{
+	font: "myriad pro";
+	font-size: 24px;
+	padding: 30px 0px 0px 0px;
+}
+.blog-right table{
+	padding: 30px 0px 0px 30px;
+}
+.blog-right table td{
+	padding: 0px 20px 0px 10px;
+}
+.blog-right-table-icon{
+	margin: 0px 10px 10px 0px;
+}
+.blog-right-table-more{
+	margin: 10px 0px 0px 0px;
+	padding: 0px 30px 0px 0px;
+}
+.blog-right table h4{
+	margin: 0px 0px 10px 0px;
+	font-size: 14px;
+}
+.blog-right table p{
+	font-size: 13px;
+}
+.blog-right-twitter{
+}
+.blog-right-twitter h3{
+	font-size: 20px;
+	color: #539fc7;
+}
+.blog-right-twitter img{
+	margin: 30px 10px 0px 50px;
+}
+.blog-right-twitter p{
+	font-size: 12px;
+	margin: 30px 0px 0px 780px;
+	color: #666;
+}
+.blog-right-twitter a{
+	font-size:12px;
+	color: #00F;
+}
+#footer{
+	float: left;
+	width: 1200px;
+	background-color: #282828;
+	text-align: left;
+}
+.footer-table-top{
+	margin: -30px 100px 0px 100px;
+}
+.footer table tr td{
+	vertical-align: top;
+}
+.footer h3{
+	font-size: 30px;
+	margin: 0px 0px 10px 0px;
+	color: #fff;
+}
+.footer p{
+	color: #fff;
+	font-size: 14px;
+}
+.footer-more{
+	padding: 0px 60px 0px 0px;
+}
+.footer ul{
+	list-style:none;
+}
+.footer ul li{
+	color: #fff;
+	font-size: 14px;
+	margin: 0px 0px 5px 0px;
+}
+.footer-quickcontact{
+	padding: 15px 0px 15px 0px;
+}
+.foot-background{
+	width:1200px;
+	height: 62px;
+	background-image:url(images/foot.gif);
+	background-repeat: no-repeat;
+	background-position:center;
+}
+.footer-table-bot{
+	margin: 30px 100px 0px 100px;
+}
+.foot-background table tr td{
+	padding: 10px 0px 0px 0px;
+	vertical-align: center;
+}
+.footer-links{
+	float: right;
+}
+.footer a{
+	color: #fff;
+}
