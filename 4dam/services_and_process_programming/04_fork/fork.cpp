@@ -4,13 +4,15 @@
 
 int main(int argc, char *argv[]){
 
-    int variable;
+	int variable = 0, count = 0;
 
-    for(int i=0; i<2; i++){
-	printf("Padre %d.\n", getpid());
-	variable = fork();
-	printf("Hijo %d.\n", getpid());
-    }
-    printf("\n");
-    return EXIT_SUCCESS;
+	for(int i=0; i<4; i++){
+		printf(">>>>%i ->> %d.\n", count, variable);
+		count++;
+		printf(">%i\n", count);
+		fork();
+		printf(">>%i\n", count);
+		variable++;
+	}
+	return EXIT_SUCCESS;
 }
