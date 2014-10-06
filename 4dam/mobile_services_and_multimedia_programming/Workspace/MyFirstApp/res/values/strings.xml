@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Mi aplicacion</string>
+    <string name="hello_world">¡Hola mundo!</string>
+    <string name="action_settings">Opciones</string>
+    <string name="edit_message">Envía un mensaje</string>
+    <string name="button_send">Enviar</string>
+    <string name="title_activity_main">MainActivity</string>
+</resources>
