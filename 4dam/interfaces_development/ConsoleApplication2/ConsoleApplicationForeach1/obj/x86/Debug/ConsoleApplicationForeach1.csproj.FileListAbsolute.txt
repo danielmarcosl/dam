@@ -1,0 +1,4 @@
+C:\Users\CFGS\Documents\Visual Studio 2010\Projects\ConsoleApplication2\ConsoleApplicationForeach1\bin\Debug\ConsoleApplicationForeach1.exe
+C:\Users\CFGS\Documents\Visual Studio 2010\Projects\ConsoleApplication2\ConsoleApplicationForeach1\bin\Debug\ConsoleApplicationForeach1.pdb
+C:\Users\CFGS\Documents\Visual Studio 2010\Projects\ConsoleApplication2\ConsoleApplicationForeach1\obj\x86\Debug\ConsoleApplicationForeach1.exe
+C:\Users\CFGS\Documents\Visual Studio 2010\Projects\ConsoleApplication2\ConsoleApplicationForeach1\obj\x86\Debug\ConsoleApplicationForeach1.pdb
