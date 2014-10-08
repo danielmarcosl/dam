@@ -1,4 +1,0 @@
-d:\Biblioteca\Documentos\Visual Studio 2010\Projects\ConsoleApplicationNextDay\ConsoleApplicationCalculaAnyo\bin\Debug\ConsoleApplicationCalculaAnyo.exe
-d:\Biblioteca\Documentos\Visual Studio 2010\Projects\ConsoleApplicationNextDay\ConsoleApplicationCalculaAnyo\bin\Debug\ConsoleApplicationCalculaAnyo.pdb
-d:\Biblioteca\Documentos\Visual Studio 2010\Projects\ConsoleApplicationNextDay\ConsoleApplicationCalculaAnyo\obj\x86\Debug\ConsoleApplicationCalculaAnyo.exe
-d:\Biblioteca\Documentos\Visual Studio 2010\Projects\ConsoleApplicationNextDay\ConsoleApplicationCalculaAnyo\obj\x86\Debug\ConsoleApplicationCalculaAnyo.pdb
