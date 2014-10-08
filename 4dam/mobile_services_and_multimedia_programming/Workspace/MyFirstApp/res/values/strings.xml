@@ -7,4 +7,6 @@
     <string name="edit_message">Envía un mensaje</string>
     <string name="button_send">Enviar</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_display_message">My Message</string>
+
 </resources>
