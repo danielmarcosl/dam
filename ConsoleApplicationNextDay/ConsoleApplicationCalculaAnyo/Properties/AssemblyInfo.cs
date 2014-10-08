@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // La información general sobre un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos atributos para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("ConsoleApplicationNextDay")]
+[assembly: AssemblyTitle("ConsoleApplicationCalculaAnyo")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ConsoleApplicationNextDay")]
+[assembly: AssemblyProduct("ConsoleApplicationCalculaAnyo")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como identificador de typelib si este proyecto se expone a COM
-[assembly: Guid("e69a24fd-f063-46ca-854f-f68be0608350")]
+[assembly: Guid("e0eebba1-8f3f-4b71-8f21-66105beb070b")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //

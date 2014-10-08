@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3E1CFE9E-BE4D-4299-BBBB-0A264E7F02EA}</ProjectGuid>
+    <ProjectGuid>{9E22DB07-1549-4617-988D-7CDAE0364C9B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConsoleApplicationNextDay</RootNamespace>
-    <AssemblyName>ConsoleApplicationNextDay</AssemblyName>
+    <RootNamespace>ConsoleApplicationCalculaAnyo</RootNamespace>
+    <AssemblyName>ConsoleApplicationCalculaAnyo</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
