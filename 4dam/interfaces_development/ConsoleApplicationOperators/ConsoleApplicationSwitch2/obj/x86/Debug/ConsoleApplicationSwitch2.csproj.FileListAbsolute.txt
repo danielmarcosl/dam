@@ -1,4 +1,0 @@
-C:\Users\CFGS\Documents\Visual Studio 2010\Projects\ConsoleApplication2\ConsoleApplicationSwitch2\bin\Debug\ConsoleApplicationSwitch2.exe
-C:\Users\CFGS\Documents\Visual Studio 2010\Projects\ConsoleApplication2\ConsoleApplicationSwitch2\bin\Debug\ConsoleApplicationSwitch2.pdb
-C:\Users\CFGS\Documents\Visual Studio 2010\Projects\ConsoleApplication2\ConsoleApplicationSwitch2\obj\x86\Debug\ConsoleApplicationSwitch2.exe
-C:\Users\CFGS\Documents\Visual Studio 2010\Projects\ConsoleApplication2\ConsoleApplicationSwitch2\obj\x86\Debug\ConsoleApplicationSwitch2.pdb

@@ -1,5 +1,0 @@
-d:\Biblioteca\Documentos\Visual Studio 2010\Projects\ConsoleApplicationNextDay\ConsoleApplicationNextDay\bin\Debug\ConsoleApplicationNextDay.exe
-d:\Biblioteca\Documentos\Visual Studio 2010\Projects\ConsoleApplicationNextDay\ConsoleApplicationNextDay\bin\Debug\ConsoleApplicationNextDay.pdb
-d:\Biblioteca\Documentos\Visual Studio 2010\Projects\ConsoleApplicationNextDay\ConsoleApplicationNextDay\obj\x86\Debug\ConsoleApplicationNextDay.exe
-d:\Biblioteca\Documentos\Visual Studio 2010\Projects\ConsoleApplicationNextDay\ConsoleApplicationNextDay\obj\x86\Debug\ConsoleApplicationNextDay.pdb
-d:\Biblioteca\Documentos\Visual Studio 2010\Projects\ConsoleApplicationNextDay\ConsoleApplicationNextDay\obj\x86\Debug\ConsoleApplicationNextDay.csprojResolveAssemblyReference.cache

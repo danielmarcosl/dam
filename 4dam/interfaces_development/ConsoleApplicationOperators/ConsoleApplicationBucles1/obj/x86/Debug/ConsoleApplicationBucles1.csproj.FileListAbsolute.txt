@@ -1,4 +1,0 @@
-C:\Users\CFGS\Documents\Visual Studio 2010\Projects\ConsoleApplication2\ConsoleApplicationBucles1\bin\Debug\ConsoleApplicationBucles1.exe
-C:\Users\CFGS\Documents\Visual Studio 2010\Projects\ConsoleApplication2\ConsoleApplicationBucles1\bin\Debug\ConsoleApplicationBucles1.pdb
-C:\Users\CFGS\Documents\Visual Studio 2010\Projects\ConsoleApplication2\ConsoleApplicationBucles1\obj\x86\Debug\ConsoleApplicationBucles1.exe
-C:\Users\CFGS\Documents\Visual Studio 2010\Projects\ConsoleApplication2\ConsoleApplicationBucles1\obj\x86\Debug\ConsoleApplicationBucles1.pdb
