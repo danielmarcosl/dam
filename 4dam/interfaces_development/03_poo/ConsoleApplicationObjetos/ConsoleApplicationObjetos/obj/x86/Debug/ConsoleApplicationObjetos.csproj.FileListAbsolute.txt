@@ -1,0 +1,5 @@
+c:\users\cfgs\documents\visual studio 2010\Projects\ConsoleApplicationObjetos\ConsoleApplicationObjetos\bin\Debug\ConsoleApplicationObjetos.exe
+c:\users\cfgs\documents\visual studio 2010\Projects\ConsoleApplicationObjetos\ConsoleApplicationObjetos\bin\Debug\ConsoleApplicationObjetos.pdb
+c:\users\cfgs\documents\visual studio 2010\Projects\ConsoleApplicationObjetos\ConsoleApplicationObjetos\obj\x86\Debug\ConsoleApplicationObjetos.exe
+c:\users\cfgs\documents\visual studio 2010\Projects\ConsoleApplicationObjetos\ConsoleApplicationObjetos\obj\x86\Debug\ConsoleApplicationObjetos.pdb
+C:\Users\CFGS\Documents\Visual Studio 2010\Projects\ConsoleApplicationObjetos\ConsoleApplicationObjetos\obj\x86\Debug\ConsoleApplicationObjetos.csprojResolveAssemblyReference.cache
