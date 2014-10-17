@@ -1,0 +1,4 @@
+c:\users\cfgs\documents\visual studio 2010\Projects\ConsoleApplicationObjets\ConsoleApplicationObjets\bin\Debug\ConsoleApplicationObjets.exe
+c:\users\cfgs\documents\visual studio 2010\Projects\ConsoleApplicationObjets\ConsoleApplicationObjets\bin\Debug\ConsoleApplicationObjets.pdb
+c:\users\cfgs\documents\visual studio 2010\Projects\ConsoleApplicationObjets\ConsoleApplicationObjets\obj\x86\Debug\ConsoleApplicationObjets.exe
+c:\users\cfgs\documents\visual studio 2010\Projects\ConsoleApplicationObjets\ConsoleApplicationObjets\obj\x86\Debug\ConsoleApplicationObjets.pdb
