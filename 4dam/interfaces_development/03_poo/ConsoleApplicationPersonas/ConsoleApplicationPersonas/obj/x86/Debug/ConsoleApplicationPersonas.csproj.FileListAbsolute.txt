@@ -1,0 +1,4 @@
+c:\users\cfgs\documents\visual studio 2010\Projects\ConsoleApplicationPersonas\ConsoleApplicationPersonas\bin\Debug\ConsoleApplicationPersonas.exe
+c:\users\cfgs\documents\visual studio 2010\Projects\ConsoleApplicationPersonas\ConsoleApplicationPersonas\bin\Debug\ConsoleApplicationPersonas.pdb
+c:\users\cfgs\documents\visual studio 2010\Projects\ConsoleApplicationPersonas\ConsoleApplicationPersonas\obj\x86\Debug\ConsoleApplicationPersonas.exe
+c:\users\cfgs\documents\visual studio 2010\Projects\ConsoleApplicationPersonas\ConsoleApplicationPersonas\obj\x86\Debug\ConsoleApplicationPersonas.pdb

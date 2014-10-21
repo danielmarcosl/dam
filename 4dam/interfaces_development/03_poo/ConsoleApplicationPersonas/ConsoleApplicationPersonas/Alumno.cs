@@ -8,8 +8,8 @@ namespace ConsoleApplicationPersonas
     class Alumno : Persona
     {
         // Atributos
-        string nMatricula;
-        string curso;
+        private string nMatricula;
+        private string curso;
 
         // Constructor
         public Alumno()
@@ -19,7 +19,7 @@ namespace ConsoleApplicationPersonas
         }
 
         public Alumno(string no, int an, string di, string nMat, string cu)
-            : base(no,an,di)
+            : base(no, an, di)
         {
             nMatricula = nMat;
             curso = cu;
@@ -27,7 +27,7 @@ namespace ConsoleApplicationPersonas
 
         public string NombreAlumno()
         {
-            return (" Nº Matricula: " + nMatricula + " Curso: " + curso);
+            return(NombreCompleto() + " Nº Matricula: " + nMatricula + " Curso: " + curso);
         }
     }
 }
