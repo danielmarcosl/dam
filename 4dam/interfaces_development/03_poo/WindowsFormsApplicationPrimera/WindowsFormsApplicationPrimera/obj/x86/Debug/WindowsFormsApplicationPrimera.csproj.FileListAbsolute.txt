@@ -1,0 +1,7 @@
+c:\users\cfgs\documents\visual studio 2010\Projects\WindowsFormsApplicationPrimera\WindowsFormsApplicationPrimera\bin\Debug\WindowsFormsApplicationPrimera.exe
+c:\users\cfgs\documents\visual studio 2010\Projects\WindowsFormsApplicationPrimera\WindowsFormsApplicationPrimera\bin\Debug\WindowsFormsApplicationPrimera.pdb
+c:\users\cfgs\documents\visual studio 2010\Projects\WindowsFormsApplicationPrimera\WindowsFormsApplicationPrimera\obj\x86\Debug\WindowsFormsApplicationPrimera.Properties.Resources.resources
+c:\users\cfgs\documents\visual studio 2010\Projects\WindowsFormsApplicationPrimera\WindowsFormsApplicationPrimera\obj\x86\Debug\WindowsFormsApplicationPrimera.csproj.GenerateResource.Cache
+c:\users\cfgs\documents\visual studio 2010\Projects\WindowsFormsApplicationPrimera\WindowsFormsApplicationPrimera\obj\x86\Debug\WindowsFormsApplicationPrimera.exe
+c:\users\cfgs\documents\visual studio 2010\Projects\WindowsFormsApplicationPrimera\WindowsFormsApplicationPrimera\obj\x86\Debug\WindowsFormsApplicationPrimera.pdb
+c:\users\cfgs\documents\visual studio 2010\Projects\WindowsFormsApplicationPrimera\WindowsFormsApplicationPrimera\obj\x86\Debug\WindowsFormsApplicationPrimera.FormPersonas.resources
