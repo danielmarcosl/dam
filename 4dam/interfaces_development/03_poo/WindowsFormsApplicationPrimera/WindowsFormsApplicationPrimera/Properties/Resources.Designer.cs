@@ -63,29 +63,9 @@ namespace WindowsFormsApplicationPrimera.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _18360_doge_doge_simple {
-            get {
-                object obj = ResourceManager.GetObject("18360-doge-doge-simple", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap a0126590_22305352 {
             get {
                 object obj = ResourceManager.GetObject("a0126590_22305352", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Penguins {
-            get {
-                object obj = ResourceManager.GetObject("Penguins", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

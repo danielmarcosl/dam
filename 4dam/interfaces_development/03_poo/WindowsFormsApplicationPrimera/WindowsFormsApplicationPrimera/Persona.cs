@@ -31,5 +31,20 @@ namespace WindowsFormsApplicationPrimera
         {
             return ("Resultado 1: Nombre: " + nombre + ", Año: " + anioNac + " y Direccion: " + direccion);
         }
+
+        public void ModificarNombre(string n)
+        {
+            nombre = n;
+        }
+
+        public void ModificarAnio(int a)
+        {
+            anioNac = a;
+        }
+
+        public void ModificarDireccion(string d)
+        {
+            direccion = d;
+        }
     }
 }

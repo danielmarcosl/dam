@@ -35,9 +35,9 @@
             this.labelDireccion = new System.Windows.Forms.Label();
             this.textBoxdireccion = new System.Windows.Forms.TextBox();
             this.buttonCrear = new System.Windows.Forms.Button();
-            this.labelResultado1 = new System.Windows.Forms.Label();
             this.buttonModificar = new System.Windows.Forms.Button();
-            this.labelResultado2 = new System.Windows.Forms.Label();
+            this.listViewResultado = new System.Windows.Forms.ListView();
+            this.buttonBorrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelNombre
@@ -55,7 +55,7 @@
             this.textBoxNombre.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.textBoxNombre.Location = new System.Drawing.Point(100, 10);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(172, 20);
+            this.textBoxNombre.Size = new System.Drawing.Size(237, 20);
             this.textBoxNombre.TabIndex = 1;
             // 
             // labelNacimiento
@@ -73,7 +73,7 @@
             this.textBoxNacimiento.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.textBoxNacimiento.Location = new System.Drawing.Point(100, 47);
             this.textBoxNacimiento.Name = "textBoxNacimiento";
-            this.textBoxNacimiento.Size = new System.Drawing.Size(172, 20);
+            this.textBoxNacimiento.Size = new System.Drawing.Size(237, 20);
             this.textBoxNacimiento.TabIndex = 2;
             // 
             // labelDireccion
@@ -91,7 +91,7 @@
             this.textBoxdireccion.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.textBoxdireccion.Location = new System.Drawing.Point(100, 86);
             this.textBoxdireccion.Name = "textBoxdireccion";
-            this.textBoxdireccion.Size = new System.Drawing.Size(172, 20);
+            this.textBoxdireccion.Size = new System.Drawing.Size(237, 20);
             this.textBoxdireccion.TabIndex = 3;
             // 
             // buttonCrear
@@ -104,43 +104,42 @@
             this.buttonCrear.UseVisualStyleBackColor = true;
             this.buttonCrear.Click += new System.EventHandler(this.buttonCrear_Click);
             // 
-            // labelResultado1
-            // 
-            this.labelResultado1.AutoSize = true;
-            this.labelResultado1.Location = new System.Drawing.Point(39, 175);
-            this.labelResultado1.Name = "labelResultado1";
-            this.labelResultado1.Size = new System.Drawing.Size(61, 13);
-            this.labelResultado1.TabIndex = 5;
-            this.labelResultado1.Text = "Resultado1";
-            // 
             // buttonModificar
             // 
-            this.buttonModificar.Location = new System.Drawing.Point(197, 131);
+            this.buttonModificar.Location = new System.Drawing.Point(181, 131);
             this.buttonModificar.Name = "buttonModificar";
             this.buttonModificar.Size = new System.Drawing.Size(75, 23);
             this.buttonModificar.TabIndex = 6;
             this.buttonModificar.Text = "Modificar";
             this.buttonModificar.UseVisualStyleBackColor = true;
-            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
-            // labelResultado2
+            // listViewResultado
             // 
-            this.labelResultado2.AutoSize = true;
-            this.labelResultado2.Location = new System.Drawing.Point(39, 202);
-            this.labelResultado2.Name = "labelResultado2";
-            this.labelResultado2.Size = new System.Drawing.Size(61, 13);
-            this.labelResultado2.TabIndex = 5;
-            this.labelResultado2.Text = "Resultado2";
+            this.listViewResultado.Location = new System.Drawing.Point(15, 170);
+            this.listViewResultado.Name = "listViewResultado";
+            this.listViewResultado.Size = new System.Drawing.Size(322, 133);
+            this.listViewResultado.TabIndex = 7;
+            this.listViewResultado.UseCompatibleStateImageBehavior = false;
+            this.listViewResultado.View = System.Windows.Forms.View.List;
+            // 
+            // buttonBorrar
+            // 
+            this.buttonBorrar.Location = new System.Drawing.Point(262, 131);
+            this.buttonBorrar.Name = "buttonBorrar";
+            this.buttonBorrar.Size = new System.Drawing.Size(75, 23);
+            this.buttonBorrar.TabIndex = 8;
+            this.buttonBorrar.Text = "Borrar";
+            this.buttonBorrar.UseVisualStyleBackColor = true;
+            this.buttonBorrar.Click += new System.EventHandler(this.buttonBorrar_Click);
             // 
             // FormPersonas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::WindowsFormsApplicationPrimera.Properties.Resources.a0126590_22305352;
-            this.ClientSize = new System.Drawing.Size(500, 374);
+            this.ClientSize = new System.Drawing.Size(353, 319);
+            this.Controls.Add(this.buttonBorrar);
+            this.Controls.Add(this.listViewResultado);
             this.Controls.Add(this.buttonModificar);
-            this.Controls.Add(this.labelResultado2);
-            this.Controls.Add(this.labelResultado1);
             this.Controls.Add(this.buttonCrear);
             this.Controls.Add(this.textBoxdireccion);
             this.Controls.Add(this.labelDireccion);
@@ -164,9 +163,9 @@
         private System.Windows.Forms.Label labelDireccion;
         private System.Windows.Forms.TextBox textBoxdireccion;
         private System.Windows.Forms.Button buttonCrear;
-        private System.Windows.Forms.Label labelResultado1;
         private System.Windows.Forms.Button buttonModificar;
-        private System.Windows.Forms.Label labelResultado2;
+        private System.Windows.Forms.ListView listViewResultado;
+        private System.Windows.Forms.Button buttonBorrar;
     }
 }
 
