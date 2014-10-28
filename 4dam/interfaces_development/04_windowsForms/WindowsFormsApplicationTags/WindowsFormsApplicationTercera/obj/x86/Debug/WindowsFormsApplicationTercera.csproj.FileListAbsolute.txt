@@ -1,0 +1,7 @@
+c:\users\cfgs\documents\visual studio 2010\Projects\WindowsFormsApplicationTercera\WindowsFormsApplicationTercera\bin\Debug\WindowsFormsApplicationTercera.exe
+c:\users\cfgs\documents\visual studio 2010\Projects\WindowsFormsApplicationTercera\WindowsFormsApplicationTercera\bin\Debug\WindowsFormsApplicationTercera.pdb
+c:\users\cfgs\documents\visual studio 2010\Projects\WindowsFormsApplicationTercera\WindowsFormsApplicationTercera\obj\x86\Debug\WindowsFormsApplicationTercera.Form1.resources
+c:\users\cfgs\documents\visual studio 2010\Projects\WindowsFormsApplicationTercera\WindowsFormsApplicationTercera\obj\x86\Debug\WindowsFormsApplicationTercera.Properties.Resources.resources
+c:\users\cfgs\documents\visual studio 2010\Projects\WindowsFormsApplicationTercera\WindowsFormsApplicationTercera\obj\x86\Debug\WindowsFormsApplicationTercera.csproj.GenerateResource.Cache
+c:\users\cfgs\documents\visual studio 2010\Projects\WindowsFormsApplicationTercera\WindowsFormsApplicationTercera\obj\x86\Debug\WindowsFormsApplicationTercera.exe
+c:\users\cfgs\documents\visual studio 2010\Projects\WindowsFormsApplicationTercera\WindowsFormsApplicationTercera\obj\x86\Debug\WindowsFormsApplicationTercera.pdb

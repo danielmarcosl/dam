@@ -1,0 +1,2 @@
+C:\Users\CFGS\Documents\Visual Studio 2010\Projects\WindowsFormsApplicationTags\WindowsFormsApplicationTercera\obj\x86\Debug\WindowsFormsApplicationTercera.exe
+C:\Users\CFGS\Documents\Visual Studio 2010\Projects\WindowsFormsApplicationTags\WindowsFormsApplicationTercera\obj\x86\Debug\WindowsFormsApplicationTercera.pdb
