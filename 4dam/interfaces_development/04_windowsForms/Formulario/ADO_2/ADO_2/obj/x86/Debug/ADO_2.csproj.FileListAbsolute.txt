@@ -1,0 +1,7 @@
+C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO_2\ADO_2\bin\Debug\ADO_2.exe
+C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO_2\ADO_2\bin\Debug\ADO_2.pdb
+C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO_2\ADO_2\obj\x86\Debug\ADO_2.Form1.resources
+C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO_2\ADO_2\obj\x86\Debug\ADO_2.Properties.Resources.resources
+C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO_2\ADO_2\obj\x86\Debug\ADO_2.csproj.GenerateResource.Cache
+C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO_2\ADO_2\obj\x86\Debug\ADO_2.exe
+C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO_2\ADO_2\obj\x86\Debug\ADO_2.pdb
