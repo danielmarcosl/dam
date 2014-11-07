@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.labelAutor = new System.Windows.Forms.Label();
             this.comboBoxAutor = new System.Windows.Forms.ComboBox();
             this.buttonCargarDatos = new System.Windows.Forms.Button();
@@ -44,15 +46,22 @@
             this.textBoxEdad = new System.Windows.Forms.TextBox();
             this.labelDomicilio = new System.Windows.Forms.Label();
             this.textBoxDomicilio = new System.Windows.Forms.TextBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPageAutor = new System.Windows.Forms.TabPage();
+            this.tabPageEmpleado = new System.Windows.Forms.TabPage();
+            this.imageListAplicacion = new System.Windows.Forms.ImageList(this.components);
+            this.tabControl1.SuspendLayout();
+            this.tabPageAutor.SuspendLayout();
+            this.tabPageEmpleado.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelAutor
             // 
             this.labelAutor.AutoSize = true;
-            this.labelAutor.Location = new System.Drawing.Point(13, 19);
+            this.labelAutor.Location = new System.Drawing.Point(6, 21);
             this.labelAutor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAutor.Name = "labelAutor";
-            this.labelAutor.Size = new System.Drawing.Size(61, 25);
+            this.labelAutor.Size = new System.Drawing.Size(60, 26);
             this.labelAutor.TabIndex = 0;
             this.labelAutor.Text = "Autor";
             // 
@@ -60,18 +69,18 @@
             // 
             this.comboBoxAutor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxAutor.FormattingEnabled = true;
-            this.comboBoxAutor.Location = new System.Drawing.Point(82, 16);
+            this.comboBoxAutor.Location = new System.Drawing.Point(70, 18);
             this.comboBoxAutor.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxAutor.Name = "comboBoxAutor";
-            this.comboBoxAutor.Size = new System.Drawing.Size(160, 33);
+            this.comboBoxAutor.Size = new System.Drawing.Size(147, 34);
             this.comboBoxAutor.TabIndex = 1;
             // 
             // buttonCargarDatos
             // 
-            this.buttonCargarDatos.Location = new System.Drawing.Point(253, 13);
+            this.buttonCargarDatos.Location = new System.Drawing.Point(12, 14);
             this.buttonCargarDatos.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCargarDatos.Name = "buttonCargarDatos";
-            this.buttonCargarDatos.Size = new System.Drawing.Size(159, 37);
+            this.buttonCargarDatos.Size = new System.Drawing.Size(146, 38);
             this.buttonCargarDatos.TabIndex = 2;
             this.buttonCargarDatos.Text = "Cargar Datos";
             this.buttonCargarDatos.UseVisualStyleBackColor = true;
@@ -84,9 +93,9 @@
             this.columnHeaderNombre,
             this.columnHeaderEdad,
             this.columnHeaderDomicilio});
-            this.listViewEmpleado.Location = new System.Drawing.Point(18, 75);
+            this.listViewEmpleado.Location = new System.Drawing.Point(6, 6);
             this.listViewEmpleado.Name = "listViewEmpleado";
-            this.listViewEmpleado.Size = new System.Drawing.Size(394, 166);
+            this.listViewEmpleado.Size = new System.Drawing.Size(413, 172);
             this.listViewEmpleado.TabIndex = 3;
             this.listViewEmpleado.UseCompatibleStateImageBehavior = false;
             this.listViewEmpleado.View = System.Windows.Forms.View.Details;
@@ -114,90 +123,137 @@
             // labelEM
             // 
             this.labelEM.AutoSize = true;
-            this.labelEM.Location = new System.Drawing.Point(458, 104);
+            this.labelEM.Location = new System.Drawing.Point(450, 12);
             this.labelEM.Name = "labelEM";
-            this.labelEM.Size = new System.Drawing.Size(60, 25);
+            this.labelEM.Size = new System.Drawing.Size(50, 26);
             this.labelEM.TabIndex = 4;
             this.labelEM.Text = "EM#";
             // 
             // textBoxEM
             // 
-            this.textBoxEM.Location = new System.Drawing.Point(520, 101);
+            this.textBoxEM.Location = new System.Drawing.Point(507, 9);
             this.textBoxEM.Name = "textBoxEM";
-            this.textBoxEM.Size = new System.Drawing.Size(157, 31);
+            this.textBoxEM.Size = new System.Drawing.Size(144, 33);
             this.textBoxEM.TabIndex = 5;
             // 
             // labelNombre
             // 
             this.labelNombre.AutoSize = true;
-            this.labelNombre.Location = new System.Drawing.Point(442, 138);
+            this.labelNombre.Location = new System.Drawing.Point(435, 48);
             this.labelNombre.Name = "labelNombre";
-            this.labelNombre.Size = new System.Drawing.Size(76, 25);
+            this.labelNombre.Size = new System.Drawing.Size(82, 26);
             this.labelNombre.TabIndex = 4;
             this.labelNombre.Text = "Nombre";
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(520, 135);
+            this.textBoxNombre.Location = new System.Drawing.Point(507, 45);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(157, 31);
+            this.textBoxNombre.Size = new System.Drawing.Size(144, 33);
             this.textBoxNombre.TabIndex = 5;
             // 
             // labelEdad
             // 
             this.labelEdad.AutoSize = true;
-            this.labelEdad.Location = new System.Drawing.Point(462, 172);
+            this.labelEdad.Location = new System.Drawing.Point(454, 83);
             this.labelEdad.Name = "labelEdad";
-            this.labelEdad.Size = new System.Drawing.Size(56, 25);
+            this.labelEdad.Size = new System.Drawing.Size(54, 26);
             this.labelEdad.TabIndex = 4;
             this.labelEdad.Text = "Edad";
             // 
             // textBoxEdad
             // 
-            this.textBoxEdad.Location = new System.Drawing.Point(520, 169);
+            this.textBoxEdad.Location = new System.Drawing.Point(507, 80);
             this.textBoxEdad.Name = "textBoxEdad";
-            this.textBoxEdad.Size = new System.Drawing.Size(157, 31);
+            this.textBoxEdad.Size = new System.Drawing.Size(144, 33);
             this.textBoxEdad.TabIndex = 5;
             // 
             // labelDomicilio
             // 
             this.labelDomicilio.AutoSize = true;
-            this.labelDomicilio.Location = new System.Drawing.Point(426, 203);
+            this.labelDomicilio.Location = new System.Drawing.Point(421, 115);
             this.labelDomicilio.Name = "labelDomicilio";
-            this.labelDomicilio.Size = new System.Drawing.Size(92, 25);
+            this.labelDomicilio.Size = new System.Drawing.Size(93, 26);
             this.labelDomicilio.TabIndex = 4;
             this.labelDomicilio.Text = "Domicilio";
             // 
             // textBoxDomicilio
             // 
-            this.textBoxDomicilio.Location = new System.Drawing.Point(520, 200);
+            this.textBoxDomicilio.Location = new System.Drawing.Point(507, 112);
             this.textBoxDomicilio.Name = "textBoxDomicilio";
-            this.textBoxDomicilio.Size = new System.Drawing.Size(157, 31);
+            this.textBoxDomicilio.Size = new System.Drawing.Size(144, 33);
             this.textBoxDomicilio.TabIndex = 5;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPageAutor);
+            this.tabControl1.Controls.Add(this.tabPageEmpleado);
+            this.tabControl1.ImageList = this.imageListAplicacion;
+            this.tabControl1.Location = new System.Drawing.Point(17, 72);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(664, 387);
+            this.tabControl1.TabIndex = 6;
+            // 
+            // tabPageAutor
+            // 
+            this.tabPageAutor.BackColor = System.Drawing.Color.Transparent;
+            this.tabPageAutor.Controls.Add(this.labelAutor);
+            this.tabPageAutor.Controls.Add(this.comboBoxAutor);
+            this.tabPageAutor.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tabPageAutor.ImageIndex = 1;
+            this.tabPageAutor.Location = new System.Drawing.Point(4, 39);
+            this.tabPageAutor.Name = "tabPageAutor";
+            this.tabPageAutor.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageAutor.Size = new System.Drawing.Size(656, 344);
+            this.tabPageAutor.TabIndex = 0;
+            this.tabPageAutor.Text = "Autor";
+            // 
+            // tabPageEmpleado
+            // 
+            this.tabPageEmpleado.Controls.Add(this.listViewEmpleado);
+            this.tabPageEmpleado.Controls.Add(this.textBoxDomicilio);
+            this.tabPageEmpleado.Controls.Add(this.textBoxNombre);
+            this.tabPageEmpleado.Controls.Add(this.textBoxEdad);
+            this.tabPageEmpleado.Controls.Add(this.labelEM);
+            this.tabPageEmpleado.Controls.Add(this.labelNombre);
+            this.tabPageEmpleado.Controls.Add(this.textBoxEM);
+            this.tabPageEmpleado.Controls.Add(this.labelEdad);
+            this.tabPageEmpleado.Controls.Add(this.labelDomicilio);
+            this.tabPageEmpleado.ImageIndex = 0;
+            this.tabPageEmpleado.Location = new System.Drawing.Point(4, 39);
+            this.tabPageEmpleado.Name = "tabPageEmpleado";
+            this.tabPageEmpleado.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageEmpleado.Size = new System.Drawing.Size(656, 344);
+            this.tabPageEmpleado.TabIndex = 1;
+            this.tabPageEmpleado.Text = "Empleado";
+            this.tabPageEmpleado.UseVisualStyleBackColor = true;
+            // 
+            // imageListAplicacion
+            // 
+            this.imageListAplicacion.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListAplicacion.ImageStream")));
+            this.imageListAplicacion.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListAplicacion.Images.SetKeyName(0, "30868.png");
+            this.imageListAplicacion.Images.SetKeyName(1, "writer_male_light_256.png");
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(698, 269);
-            this.Controls.Add(this.textBoxDomicilio);
-            this.Controls.Add(this.textBoxEdad);
-            this.Controls.Add(this.textBoxNombre);
-            this.Controls.Add(this.textBoxEM);
-            this.Controls.Add(this.labelDomicilio);
-            this.Controls.Add(this.labelEdad);
-            this.Controls.Add(this.labelNombre);
-            this.Controls.Add(this.labelEM);
-            this.Controls.Add(this.listViewEmpleado);
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.ClientSize = new System.Drawing.Size(691, 471);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.buttonCargarDatos);
-            this.Controls.Add(this.comboBoxAutor);
-            this.Controls.Add(this.labelAutor);
-            this.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.tabControl1.ResumeLayout(false);
+            this.tabPageAutor.ResumeLayout(false);
+            this.tabPageAutor.PerformLayout();
+            this.tabPageEmpleado.ResumeLayout(false);
+            this.tabPageEmpleado.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -219,6 +275,10 @@
         private System.Windows.Forms.TextBox textBoxEdad;
         private System.Windows.Forms.Label labelDomicilio;
         private System.Windows.Forms.TextBox textBoxDomicilio;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPageAutor;
+        private System.Windows.Forms.TabPage tabPageEmpleado;
+        private System.Windows.Forms.ImageList imageListAplicacion;
 
     }
 }

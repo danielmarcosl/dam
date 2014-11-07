@@ -5,3 +5,4 @@ C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\04_windowsForms\F
 C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO\ADO\bin\Debug\ADO.pdb
 C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO\ADO\obj\x86\Debug\ADO.exe
 C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO\ADO\obj\x86\Debug\ADO.pdb
+C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO\ADO\obj\x86\Debug\ADO.csprojResolveAssemblyReference.cache

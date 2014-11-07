@@ -1,0 +1,4 @@
+CREATE TABLE Categorias (
+CA#	VARCHAR2(4),
+Nombre	VARCHAR2(20),
+CONSTRAINT 
