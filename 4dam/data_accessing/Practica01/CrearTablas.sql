@@ -5,7 +5,7 @@ Nombre VARCHAR2(30),
 Direccion VARCHAR2(30),
 CIF VARCHAR2(12),
 Actividad VARCHAR2(30),
-AnioCrea NUMBER(3),
+AnioCrea NUMBER(4),
 CONSTRAINT PK_Editorial_ED# PRIMARY KEY (ED#)
 );
 CREATE TABLE Publicacion

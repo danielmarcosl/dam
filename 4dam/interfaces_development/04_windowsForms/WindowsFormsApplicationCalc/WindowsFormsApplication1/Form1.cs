@@ -9,11 +9,16 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Form1 : Form
+    public partial class FormOpe : Form
     {
-        public Form1()
+        public FormOpe()
         {
             InitializeComponent();
+        }
+
+        private void texBoxOperaciones_TextChanged(object sender, EventArgs e)
+        {
+            texBoxOperaciones.Text(
         }
     }
 }

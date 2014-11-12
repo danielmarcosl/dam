@@ -6,3 +6,11 @@ C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\04_windowsForms\F
 C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO\ADO\obj\x86\Debug\ADO.exe
 C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO\ADO\obj\x86\Debug\ADO.pdb
 C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO\ADO\obj\x86\Debug\ADO.csprojResolveAssemblyReference.cache
+D:\Biblioteca\Development\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO\ADO\obj\x86\Debug\ADO.exe
+D:\Biblioteca\Development\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO\ADO\obj\x86\Debug\ADO.pdb
+D:\Biblioteca\Development\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO\ADO\obj\x86\Debug\ADO.csprojResolveAssemblyReference.cache
+D:\Biblioteca\Development\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO\ADO\obj\x86\Debug\ADO.Form1.resources
+D:\Biblioteca\Development\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO\ADO\obj\x86\Debug\ADO.Properties.Resources.resources
+D:\Biblioteca\Development\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO\ADO\obj\x86\Debug\ADO.csproj.GenerateResource.Cache
+D:\Biblioteca\Development\dam\4dam\interfaces_development\Project\obj\x86\Debug\ADO.exe
+D:\Biblioteca\Development\dam\4dam\interfaces_development\Project\obj\x86\Debug\ADO.pdb
