@@ -49,8 +49,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageAutor = new System.Windows.Forms.TabPage();
             this.tabPageEmpleado = new System.Windows.Forms.TabPage();
-            this.imageListAplicacion = new System.Windows.Forms.ImageList(this.components);
             this.buttonActualizar = new System.Windows.Forms.Button();
+            this.imageListAplicacion = new System.Windows.Forms.ImageList(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPageAutor.SuspendLayout();
             this.tabPageEmpleado.SuspendLayout();
@@ -231,13 +231,6 @@
             this.tabPageEmpleado.Text = "Empleado";
             this.tabPageEmpleado.UseVisualStyleBackColor = true;
             // 
-            // imageListAplicacion
-            // 
-            this.imageListAplicacion.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListAplicacion.ImageStream")));
-            this.imageListAplicacion.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListAplicacion.Images.SetKeyName(0, "30868.png");
-            this.imageListAplicacion.Images.SetKeyName(1, "writer_male_light_256.png");
-            // 
             // buttonActualizar
             // 
             this.buttonActualizar.Location = new System.Drawing.Point(521, 163);
@@ -248,6 +241,13 @@
             this.buttonActualizar.UseVisualStyleBackColor = true;
             this.buttonActualizar.Click += new System.EventHandler(this.buttonActualizar_Click);
             // 
+            // imageListAplicacion
+            // 
+            this.imageListAplicacion.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListAplicacion.ImageStream")));
+            this.imageListAplicacion.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListAplicacion.Images.SetKeyName(0, "30868.png");
+            this.imageListAplicacion.Images.SetKeyName(1, "writer_male_light_256.png");
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 26F);
@@ -257,7 +257,7 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.buttonCargarDatos);
             this.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
