@@ -17,6 +17,11 @@ namespace ADO
             InitializeComponent();
         }
 
+        string em;
+        string nombre;
+        string edad;
+        string domicilio;
+
         private void cargarEmpleados()
         {
             try
@@ -170,6 +175,52 @@ namespace ADO
                 textBoxNombre.Text = item.SubItems[1].Text;     // Segunda columna
                 textBoxEdad.Text = item.SubItems[2].Text;       // Tercera columna
                 textBoxDomicilio.Text = item.SubItems[3].Text;  // Cuarta columna
+            }
+        }
+
+        private void buttonActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // 0. Declaración de los objetos para conexión base datos con ADO
+                OracleConnection conexion;
+                OracleCommand comando;
+                OracleDataReader reader;
+
+                // 1. Crear la cadena de conexión a la base de datos
+                conexion = new OracleConnection();
+                conexion.ConnectionString =
+                    "Persist Security Info=False; " +
+                    "Data Source=172.18.35.50/bddam; User ID=BD_DMARCO; Password=47030791T";
+                conexion.Open();
+
+                // 2. Preparar la consulta
+                comando = new OracleCommand();
+                comando.Connection = conexion;
+
+                comando.CommandText = "UPDATE Empleado SET " +
+                    "Nombre    = '" + textBoxNombre.Text + "'," +
+                    "Edad      = '" + textBoxEdad.Text + "'," +
+                    "Domicilio = '" + textBoxDomicilio.Text + "' " +
+                    "WHERE EM# = '" + textBoxEM.Text + "'";
+
+                // 3. Ejecutar la consulta
+                comando.ExecuteNonQuery();
+
+                // 5. Cerrar conexiones
+                conexion.Close();
+
+                listViewEmpleado.Items.Clear();
+
+                cargarEmpleados();
+            }
+            catch (OracleException ex)
+            {
+                // Mensaje de error si no tiene acceso a la base de datos
+                MessageBox.Show(
+                    "Error en conexión a base de datos: " + ex.Message,
+                    "Aplicación de conexión a base de datos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

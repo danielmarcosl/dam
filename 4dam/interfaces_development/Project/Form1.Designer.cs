@@ -50,6 +50,7 @@
             this.tabPageAutor = new System.Windows.Forms.TabPage();
             this.tabPageEmpleado = new System.Windows.Forms.TabPage();
             this.imageListAplicacion = new System.Windows.Forms.ImageList(this.components);
+            this.buttonActualizar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageAutor.SuspendLayout();
             this.tabPageEmpleado.SuspendLayout();
@@ -211,6 +212,7 @@
             // 
             // tabPageEmpleado
             // 
+            this.tabPageEmpleado.Controls.Add(this.buttonActualizar);
             this.tabPageEmpleado.Controls.Add(this.listViewEmpleado);
             this.tabPageEmpleado.Controls.Add(this.textBoxDomicilio);
             this.tabPageEmpleado.Controls.Add(this.textBoxNombre);
@@ -235,6 +237,16 @@
             this.imageListAplicacion.TransparentColor = System.Drawing.Color.Transparent;
             this.imageListAplicacion.Images.SetKeyName(0, "30868.png");
             this.imageListAplicacion.Images.SetKeyName(1, "writer_male_light_256.png");
+            // 
+            // buttonActualizar
+            // 
+            this.buttonActualizar.Location = new System.Drawing.Point(521, 163);
+            this.buttonActualizar.Name = "buttonActualizar";
+            this.buttonActualizar.Size = new System.Drawing.Size(113, 34);
+            this.buttonActualizar.TabIndex = 6;
+            this.buttonActualizar.Text = "Actualizar";
+            this.buttonActualizar.UseVisualStyleBackColor = true;
+            this.buttonActualizar.Click += new System.EventHandler(this.buttonActualizar_Click);
             // 
             // Form1
             // 
@@ -282,6 +294,7 @@
         private System.Windows.Forms.TabPage tabPageAutor;
         private System.Windows.Forms.TabPage tabPageEmpleado;
         private System.Windows.Forms.ImageList imageListAplicacion;
+        private System.Windows.Forms.Button buttonActualizar;
 
     }
 }

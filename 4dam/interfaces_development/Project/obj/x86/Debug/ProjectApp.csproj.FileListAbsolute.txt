@@ -1,0 +1,8 @@
+C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\Project\obj\x86\Debug\ADO.exe
+C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\Project\obj\x86\Debug\ADO.pdb
+C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\Project\obj\x86\Debug\ProjectApp.csprojResolveAssemblyReference.cache
+C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\Project\obj\x86\Debug\ADO.Form1.resources
+C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\Project\obj\x86\Debug\ADO.Properties.Resources.resources
+C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\Project\obj\x86\Debug\ProjectApp.csproj.GenerateResource.Cache
+C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\Project\bin\Debug\ADO.exe
+C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\Project\bin\Debug\ADO.pdb
