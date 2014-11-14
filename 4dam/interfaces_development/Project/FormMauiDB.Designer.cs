@@ -1,6 +1,6 @@
 ﻿namespace ADO
 {
-    partial class Form1
+    partial class FormMauiDB
     {
         /// <summary>
         /// Variable del diseñador requerida.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMauiDB));
             this.labelAutor = new System.Windows.Forms.Label();
             this.comboBoxAutor = new System.Windows.Forms.ComboBox();
             this.buttonCargarDatos = new System.Windows.Forms.Button();
@@ -51,6 +51,8 @@
             this.tabPageEmpleado = new System.Windows.Forms.TabPage();
             this.buttonActualizar = new System.Windows.Forms.Button();
             this.imageListAplicacion = new System.Windows.Forms.ImageList(this.components);
+            this.buttonClose = new System.Windows.Forms.Button();
+            this.buttonAcercaDe = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageAutor.SuspendLayout();
             this.tabPageEmpleado.SuspendLayout();
@@ -248,12 +250,48 @@
             this.imageListAplicacion.Images.SetKeyName(0, "30868.png");
             this.imageListAplicacion.Images.SetKeyName(1, "writer_male_light_256.png");
             // 
+            // buttonClose
+            // 
+            this.buttonClose.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonClose.FlatAppearance.BorderSize = 0;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClose.ForeColor = System.Drawing.Color.DimGray;
+            this.buttonClose.Location = new System.Drawing.Point(661, 0);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(30, 30);
+            this.buttonClose.TabIndex = 7;
+            this.buttonClose.Text = "X";
+            this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
+            // buttonAcercaDe
+            // 
+            this.buttonAcercaDe.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonAcercaDe.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonAcercaDe.FlatAppearance.BorderSize = 0;
+            this.buttonAcercaDe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAcercaDe.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAcercaDe.ForeColor = System.Drawing.Color.DimGray;
+            this.buttonAcercaDe.Location = new System.Drawing.Point(631, 0);
+            this.buttonAcercaDe.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonAcercaDe.Name = "buttonAcercaDe";
+            this.buttonAcercaDe.Size = new System.Drawing.Size(30, 30);
+            this.buttonAcercaDe.TabIndex = 7;
+            this.buttonAcercaDe.Text = "?";
+            this.buttonAcercaDe.UseVisualStyleBackColor = false;
+            this.buttonAcercaDe.Click += new System.EventHandler(this.buttonAcercaDe_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(691, 471);
+            this.Controls.Add(this.buttonAcercaDe);
+            this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.buttonCargarDatos);
             this.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -295,6 +333,8 @@
         private System.Windows.Forms.TabPage tabPageEmpleado;
         private System.Windows.Forms.ImageList imageListAplicacion;
         private System.Windows.Forms.Button buttonActualizar;
+        private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.Button buttonAcercaDe;
 
     }
 }

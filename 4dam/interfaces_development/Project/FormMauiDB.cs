@@ -10,18 +10,14 @@ using Oracle.DataAccess.Client;
 
 namespace ADO
 {
-    public partial class Form1 : Form
+    public partial class FormMauiDB : Form
     {
-        public Form1()
+        public FormMauiDB()
         {
             InitializeComponent();
         }
 
-        string em;
-        string nombre;
-        string edad;
-        string domicilio;
-
+        // Hacer que se pueda mover el programa clickando en cualquier sitio
         protected override void WndProc(ref Message m)
         {
             switch (m.Msg)
@@ -35,6 +31,10 @@ namespace ADO
 
             base.WndProc(ref m);
         }
+
+        // 
+        
+
 
         private void cargarEmpleados()
         {
@@ -236,6 +236,19 @@ namespace ADO
                     "Aplicación de conexión a base de datos",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void buttonAcercaDe_Click(object sender, EventArgs e)
+        {
+            FormAcercaDe formAcerca;
+
+            formAcerca = new FormAcercaDe();
+            formAcerca.ShowDialog();
         }
     }
 }
