@@ -60,6 +60,9 @@
             this.labelTítulo.Size = new System.Drawing.Size(85, 26);
             this.labelTítulo.TabIndex = 9;
             this.labelTítulo.Text = "Maui DB";
+            this.labelTítulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
+            this.labelTítulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.labelTítulo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // label1
             // 
@@ -69,6 +72,9 @@
             this.label1.Size = new System.Drawing.Size(248, 26);
             this.label1.TabIndex = 10;
             this.label1.Text = "Autor: Daniel Marcos Lorrio";
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.label1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // label2
             // 
@@ -78,12 +84,15 @@
             this.label2.Size = new System.Drawing.Size(64, 26);
             this.label2.TabIndex = 11;
             this.label2.Text = "label2";
+            this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
+            this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.label2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // FormAcercaDe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(317, 232);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -95,6 +104,9 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FormAcercaDe";
             this.Text = "Form2";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 

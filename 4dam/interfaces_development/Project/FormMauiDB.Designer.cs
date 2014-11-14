@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMauiDB));
-            this.labelAutor = new System.Windows.Forms.Label();
-            this.comboBoxAutor = new System.Windows.Forms.ComboBox();
-            this.buttonCargarDatos = new System.Windows.Forms.Button();
             this.listViewEmpleado = new System.Windows.Forms.ListView();
             this.columnHeaderEM = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderNombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -47,47 +44,19 @@
             this.labelDomicilio = new System.Windows.Forms.Label();
             this.textBoxDomicilio = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPageAutor = new System.Windows.Forms.TabPage();
-            this.tabPageEmpleado = new System.Windows.Forms.TabPage();
+            this.tabPagePrestamo = new System.Windows.Forms.TabPage();
+            this.labelAutor = new System.Windows.Forms.Label();
+            this.comboBoxAutor = new System.Windows.Forms.ComboBox();
+            this.tabPageConsulta = new System.Windows.Forms.TabPage();
             this.buttonActualizar = new System.Windows.Forms.Button();
             this.imageListAplicacion = new System.Windows.Forms.ImageList(this.components);
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonAcercaDe = new System.Windows.Forms.Button();
+            this.buttonCargarDatos = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
-            this.tabPageAutor.SuspendLayout();
-            this.tabPageEmpleado.SuspendLayout();
+            this.tabPagePrestamo.SuspendLayout();
+            this.tabPageConsulta.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // labelAutor
-            // 
-            this.labelAutor.AutoSize = true;
-            this.labelAutor.Location = new System.Drawing.Point(6, 21);
-            this.labelAutor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelAutor.Name = "labelAutor";
-            this.labelAutor.Size = new System.Drawing.Size(60, 26);
-            this.labelAutor.TabIndex = 0;
-            this.labelAutor.Text = "Autor";
-            // 
-            // comboBoxAutor
-            // 
-            this.comboBoxAutor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxAutor.FormattingEnabled = true;
-            this.comboBoxAutor.Location = new System.Drawing.Point(70, 18);
-            this.comboBoxAutor.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBoxAutor.Name = "comboBoxAutor";
-            this.comboBoxAutor.Size = new System.Drawing.Size(147, 34);
-            this.comboBoxAutor.TabIndex = 1;
-            // 
-            // buttonCargarDatos
-            // 
-            this.buttonCargarDatos.Location = new System.Drawing.Point(12, 14);
-            this.buttonCargarDatos.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonCargarDatos.Name = "buttonCargarDatos";
-            this.buttonCargarDatos.Size = new System.Drawing.Size(146, 38);
-            this.buttonCargarDatos.TabIndex = 2;
-            this.buttonCargarDatos.Text = "Cargar Datos";
-            this.buttonCargarDatos.UseVisualStyleBackColor = true;
-            this.buttonCargarDatos.Click += new System.EventHandler(this.buttonCargarDatos_Click);
             // 
             // listViewEmpleado
             // 
@@ -189,49 +158,78 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPageAutor);
-            this.tabControl1.Controls.Add(this.tabPageEmpleado);
+            this.tabControl1.Controls.Add(this.tabPagePrestamo);
+            this.tabControl1.Controls.Add(this.tabPageConsulta);
             this.tabControl1.ImageList = this.imageListAplicacion;
-            this.tabControl1.Location = new System.Drawing.Point(17, 72);
+            this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tabControl1.Location = new System.Drawing.Point(-5, -3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(664, 387);
+            this.tabControl1.Size = new System.Drawing.Size(706, 480);
             this.tabControl1.TabIndex = 6;
             // 
-            // tabPageAutor
+            // tabPagePrestamo
             // 
-            this.tabPageAutor.BackColor = System.Drawing.Color.Transparent;
-            this.tabPageAutor.Controls.Add(this.labelAutor);
-            this.tabPageAutor.Controls.Add(this.comboBoxAutor);
-            this.tabPageAutor.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPageAutor.ImageIndex = 1;
-            this.tabPageAutor.Location = new System.Drawing.Point(4, 39);
-            this.tabPageAutor.Name = "tabPageAutor";
-            this.tabPageAutor.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAutor.Size = new System.Drawing.Size(656, 344);
-            this.tabPageAutor.TabIndex = 0;
-            this.tabPageAutor.Text = "Autor";
+            this.tabPagePrestamo.BackColor = System.Drawing.Color.DarkGray;
+            this.tabPagePrestamo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tabPagePrestamo.CausesValidation = false;
+            this.tabPagePrestamo.Controls.Add(this.labelAutor);
+            this.tabPagePrestamo.Controls.Add(this.comboBoxAutor);
+            this.tabPagePrestamo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tabPagePrestamo.ImageIndex = 1;
+            this.tabPagePrestamo.Location = new System.Drawing.Point(4, 39);
+            this.tabPagePrestamo.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPagePrestamo.Name = "tabPagePrestamo";
+            this.tabPagePrestamo.Size = new System.Drawing.Size(698, 437);
+            this.tabPagePrestamo.TabIndex = 0;
+            this.tabPagePrestamo.Text = "Préstamo";
+            this.tabPagePrestamo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
+            this.tabPagePrestamo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.tabPagePrestamo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
-            // tabPageEmpleado
+            // labelAutor
             // 
-            this.tabPageEmpleado.Controls.Add(this.buttonActualizar);
-            this.tabPageEmpleado.Controls.Add(this.listViewEmpleado);
-            this.tabPageEmpleado.Controls.Add(this.textBoxDomicilio);
-            this.tabPageEmpleado.Controls.Add(this.textBoxNombre);
-            this.tabPageEmpleado.Controls.Add(this.textBoxEdad);
-            this.tabPageEmpleado.Controls.Add(this.labelEM);
-            this.tabPageEmpleado.Controls.Add(this.labelNombre);
-            this.tabPageEmpleado.Controls.Add(this.textBoxEM);
-            this.tabPageEmpleado.Controls.Add(this.labelEdad);
-            this.tabPageEmpleado.Controls.Add(this.labelDomicilio);
-            this.tabPageEmpleado.ImageIndex = 0;
-            this.tabPageEmpleado.Location = new System.Drawing.Point(4, 39);
-            this.tabPageEmpleado.Name = "tabPageEmpleado";
-            this.tabPageEmpleado.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageEmpleado.Size = new System.Drawing.Size(656, 344);
-            this.tabPageEmpleado.TabIndex = 1;
-            this.tabPageEmpleado.Text = "Empleado";
-            this.tabPageEmpleado.UseVisualStyleBackColor = true;
+            this.labelAutor.AutoSize = true;
+            this.labelAutor.Location = new System.Drawing.Point(3, 18);
+            this.labelAutor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelAutor.Name = "labelAutor";
+            this.labelAutor.Size = new System.Drawing.Size(60, 26);
+            this.labelAutor.TabIndex = 0;
+            this.labelAutor.Text = "Autor";
+            // 
+            // comboBoxAutor
+            // 
+            this.comboBoxAutor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxAutor.FormattingEnabled = true;
+            this.comboBoxAutor.Location = new System.Drawing.Point(70, 18);
+            this.comboBoxAutor.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxAutor.Name = "comboBoxAutor";
+            this.comboBoxAutor.Size = new System.Drawing.Size(147, 34);
+            this.comboBoxAutor.TabIndex = 1;
+            // 
+            // tabPageConsulta
+            // 
+            this.tabPageConsulta.BackColor = System.Drawing.Color.DarkGray;
+            this.tabPageConsulta.Controls.Add(this.buttonActualizar);
+            this.tabPageConsulta.Controls.Add(this.listViewEmpleado);
+            this.tabPageConsulta.Controls.Add(this.textBoxDomicilio);
+            this.tabPageConsulta.Controls.Add(this.textBoxNombre);
+            this.tabPageConsulta.Controls.Add(this.textBoxEdad);
+            this.tabPageConsulta.Controls.Add(this.labelEM);
+            this.tabPageConsulta.Controls.Add(this.labelNombre);
+            this.tabPageConsulta.Controls.Add(this.textBoxEM);
+            this.tabPageConsulta.Controls.Add(this.labelEdad);
+            this.tabPageConsulta.Controls.Add(this.labelDomicilio);
+            this.tabPageConsulta.ImageIndex = 0;
+            this.tabPageConsulta.Location = new System.Drawing.Point(4, 39);
+            this.tabPageConsulta.Name = "tabPageConsulta";
+            this.tabPageConsulta.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageConsulta.Size = new System.Drawing.Size(698, 437);
+            this.tabPageConsulta.TabIndex = 1;
+            this.tabPageConsulta.Text = "Consulta";
+            this.tabPageConsulta.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
+            this.tabPageConsulta.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.tabPageConsulta.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // buttonActualizar
             // 
@@ -284,37 +282,55 @@
             this.buttonAcercaDe.UseVisualStyleBackColor = false;
             this.buttonAcercaDe.Click += new System.EventHandler(this.buttonAcercaDe_Click);
             // 
-            // Form1
+            // buttonCargarDatos
+            // 
+            this.buttonCargarDatos.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonCargarDatos.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buttonCargarDatos.FlatAppearance.BorderSize = 0;
+            this.buttonCargarDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCargarDatos.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCargarDatos.ForeColor = System.Drawing.Color.DimGray;
+            this.buttonCargarDatos.Location = new System.Drawing.Point(249, -1);
+            this.buttonCargarDatos.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonCargarDatos.Name = "buttonCargarDatos";
+            this.buttonCargarDatos.Size = new System.Drawing.Size(155, 36);
+            this.buttonCargarDatos.TabIndex = 8;
+            this.buttonCargarDatos.Text = "Cargar Datos";
+            this.buttonCargarDatos.UseVisualStyleBackColor = false;
+            this.buttonCargarDatos.Click += new System.EventHandler(this.buttonCargarDatos_Click_1);
+            // 
+            // FormMauiDB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(691, 471);
+            this.Controls.Add(this.buttonCargarDatos);
             this.Controls.Add(this.buttonAcercaDe);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.buttonCargarDatos);
             this.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "FormMauiDB";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Aplicacion de Base de Datos";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             this.tabControl1.ResumeLayout(false);
-            this.tabPageAutor.ResumeLayout(false);
-            this.tabPageAutor.PerformLayout();
-            this.tabPageEmpleado.ResumeLayout(false);
-            this.tabPageEmpleado.PerformLayout();
+            this.tabPagePrestamo.ResumeLayout(false);
+            this.tabPagePrestamo.PerformLayout();
+            this.tabPageConsulta.ResumeLayout(false);
+            this.tabPageConsulta.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label labelAutor;
-        private System.Windows.Forms.ComboBox comboBoxAutor;
-        private System.Windows.Forms.Button buttonCargarDatos;
         private System.Windows.Forms.ListView listViewEmpleado;
         private System.Windows.Forms.ColumnHeader columnHeaderEM;
         private System.Windows.Forms.ColumnHeader columnHeaderNombre;
@@ -329,12 +345,15 @@
         private System.Windows.Forms.Label labelDomicilio;
         private System.Windows.Forms.TextBox textBoxDomicilio;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPageAutor;
-        private System.Windows.Forms.TabPage tabPageEmpleado;
+        private System.Windows.Forms.TabPage tabPageConsulta;
         private System.Windows.Forms.ImageList imageListAplicacion;
         private System.Windows.Forms.Button buttonActualizar;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Button buttonAcercaDe;
+        private System.Windows.Forms.Label labelAutor;
+        private System.Windows.Forms.ComboBox comboBoxAutor;
+        private System.Windows.Forms.TabPage tabPagePrestamo;
+        private System.Windows.Forms.Button buttonCargarDatos;
 
     }
 }

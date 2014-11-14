@@ -18,23 +18,36 @@ namespace ADO
         }
 
         // Hacer que se pueda mover el programa clickando en cualquier sitio
-        protected override void WndProc(ref Message m)
-        {
-            switch (m.Msg)
-            {
-                case 0x84:
-                    base.WndProc(ref m);
-                    if ((int)m.Result == 0x1)
-                        m.Result = (IntPtr)0x2;
-                    return;
-            }
+        private bool mouseIsDown = false;
+        private Point firstPoint;
 
-            base.WndProc(ref m);
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseIsDown)
+            {
+                // Get the difference between the two points
+                int xDiff = firstPoint.X - e.Location.X;
+                int yDiff = firstPoint.Y - e.Location.Y;
+
+                // Set the new point
+                int x = this.Location.X - xDiff;
+                int y = this.Location.Y - yDiff;
+                this.Location = new Point(x, y);
+            }
         }
 
-        // 
-        
+        private void panel1_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            firstPoint = e.Location;
+            mouseIsDown = true;
+        }
 
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseIsDown = false;
+        }
+
+        //
 
         private void cargarEmpleados()
         {
@@ -172,7 +185,7 @@ namespace ADO
             }
         }
 
-        private void buttonCargarDatos_Click(object sender, EventArgs e)
+        private void buttonCargarDatos_Click_1(object sender, EventArgs e)
         {
             cargarAutores();
             cargarEmpleados();
