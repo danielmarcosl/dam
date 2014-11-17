@@ -1,0 +1,10 @@
+DROP TABLE Prestamo;
+DROP TABLE Tiene;
+DROP TABLE Resguardo;
+DROP TABLE Empleado;
+DROP TABLE Usuario;
+DROP TABLE Escribe;
+DROP TABLE Libro;
+DROP TABLE Autor;
+DROP TABLE Editorial;
+COMMIT;
