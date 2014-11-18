@@ -198,10 +198,10 @@ namespace ADO
                 // Recogemos el item seleccionado
                 ListViewItem item = listViewEmpleado.SelectedItems[0];
 
-                textBoxEM.Text = item.SubItems[0].Text;         // Primera columna
-                textBoxNombre.Text = item.SubItems[1].Text;     // Segunda columna
-                textBoxEdad.Text = item.SubItems[2].Text;       // Tercera columna
-                textBoxDomicilio.Text = item.SubItems[3].Text;  // Cuarta columna
+                textBoxApellidosUsuario.Text = item.SubItems[0].Text;         // Primera columna
+                textBoxNombreEmpleado.Text = item.SubItems[1].Text;     // Segunda columna
+                textBoxTurnoEmpleado.Text = item.SubItems[2].Text;       // Tercera columna
+                textBoxEM.Text = item.SubItems[3].Text;  // Cuarta columna
             }
         }
 
@@ -226,10 +226,10 @@ namespace ADO
                 comando.Connection = conexion;
 
                 comando.CommandText = "UPDATE Empleado SET " +
-                    "Nombre    = '" + textBoxNombre.Text + "'," +
-                    "Edad      = '" + textBoxEdad.Text + "'," +
-                    "Domicilio = '" + textBoxDomicilio.Text + "' " +
-                    "WHERE EM# = '" + textBoxEM.Text + "'";
+                    "Nombre    = '" + textBoxNombreEmpleado.Text + "'," +
+                    "Edad      = '" + textBoxTurnoEmpleado.Text + "'," +
+                    "Domicilio = '" + textBoxEM.Text + "' " +
+                    "WHERE EM# = '" + textBoxApellidosUsuario.Text + "'";
 
                 // 3. Ejecutar la consulta
                 comando.ExecuteNonQuery();

@@ -7,3 +7,10 @@ C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\Project\bin\Debug
 C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\Project\bin\Debug\ADO.pdb
 C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\Project\obj\x86\Debug\ADO.FormAcercaDe.resources
 C:\Users\CFGS\Documents\GitHub\dam\4dam\interfaces_development\Project\obj\x86\Debug\ADO.FormMauiDB.resources
+D:\Biblioteca\Development\dam\4dam\interfaces_development\Project\obj\x86\Debug\ADO.exe
+D:\Biblioteca\Development\dam\4dam\interfaces_development\Project\obj\x86\Debug\ADO.pdb
+D:\Biblioteca\Development\dam\4dam\interfaces_development\Project\obj\x86\Debug\ProjectApp.csprojResolveAssemblyReference.cache
+D:\Biblioteca\Development\dam\4dam\interfaces_development\Project\obj\x86\Debug\ADO.FormMauiDB.resources
+D:\Biblioteca\Development\dam\4dam\interfaces_development\Project\obj\x86\Debug\ADO.FormAcercaDe.resources
+D:\Biblioteca\Development\dam\4dam\interfaces_development\Project\obj\x86\Debug\ADO.Properties.Resources.resources
+D:\Biblioteca\Development\dam\4dam\interfaces_development\Project\obj\x86\Debug\ProjectApp.csproj.GenerateResource.Cache
