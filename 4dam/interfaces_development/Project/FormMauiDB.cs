@@ -47,8 +47,8 @@ namespace ADO
             mouseIsDown = false;
         }
 
-        //
 
+        // EMPLEADOS
         private void cargarEmpleados()
         {
             try
@@ -68,12 +68,13 @@ namespace ADO
                 // 2. Preparar la consulta
                 comando = new OracleCommand();
                 comando.Connection = conexion;
-                comando.CommandText = "SELECT EM#,Nombre,Edad,Domicilio FROM Empleado";
+                comando.CommandText = "SELECT EM#,NombreEmpleado,ApellidosEmpleado,Turno FROM Empleado";
 
                 // 3. Ejecutar la consulta
                 reader = comando.ExecuteReader();
 
                 // 4. Recoger datos de la consulta
+                listViewEmpleado.Items.Clear();
                 while (reader.Read())
                 {
                     // En cada vuelta del while, se recogen los elementos
@@ -83,24 +84,25 @@ namespace ADO
                     //      . varchar   --> GetString
                     //      . number    ..> GetDecimal
                     //      - date      --> GetDateTime
-                    string claveEM, edad, nombre, domicilio;
+                    string claveEM, nombreEmpleado, apellidosEmpleado, turno;
                     //int edad;
 
-                    // "SELECT EM#,Nombre,Edad,Domicilio FROM Empleado";
-                    //          0     1     2      3
+                    // "SELECT EM#,NombreEmpleado,ApellidosUsuario,Turno FROM Empleado";
+                    //          0        1               2           3
+                    // reader.GetDateTime(#).ToShortDateString()
                     claveEM = reader.GetString(0);
-                    nombre = reader.GetString(1);
+                    nombreEmpleado = reader.GetString(1);
                     //edad = (int)reader.GetDecimal(2);
-                    edad = reader.GetString(2);
-                    domicilio = reader.GetString(3);
+                    apellidosEmpleado = reader.GetString(2);
+                    turno = reader.GetString(3);
 
                     // Crear un ListViewItem para agregar el elemento
                     ListViewItem item = new ListViewItem();
 
-                    item.Text = claveEM;                 // Primera columna
-                    item.SubItems.Add(nombre);           // Segunda columna
-                    item.SubItems.Add(edad.ToString());  // Tercera columna
-                    item.SubItems.Add(domicilio);        // Cuarta  columna
+                    item.Text = claveEM;                      // Primera columna
+                    item.SubItems.Add(nombreEmpleado);        // Segunda columna
+                    item.SubItems.Add(apellidosEmpleado);     // Tercera columna
+                    item.SubItems.Add(turno);                 // Cuarta  columna
 
                     // Agregar el ítem al ListView
 
@@ -111,7 +113,7 @@ namespace ADO
                 reader.Close();
                 conexion.Close();
 
-                MessageBox.Show("Datos cargados con éxito",
+                MessageBox.Show("Empleados cargados con éxito",
                     "Aplicación de base de datos",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -124,54 +126,51 @@ namespace ADO
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void cargarAutores()
+        // USUARIOS
+        private void cargarUsuarios()
         {
             try
             {
-                // 0. Declaración de los objetos para conexión base datos con ADO
                 OracleConnection conexion;
                 OracleCommand comando;
                 OracleDataReader reader;
 
-                // 1. Crear la cadena de conexión a la base de datos
                 conexion = new OracleConnection();
                 conexion.ConnectionString = 
                     "Persist Security Info=False; " +
                     "Data Source=172.18.35.50/bddam; User ID=BD_DMARCO; Password=47030791T";
                 conexion.Open();
 
-                // 2. Preparar la consulta
                 comando = new OracleCommand();
                 comando.Connection = conexion;
-                comando.CommandText = "SELECT Nombre FROM Autor";
+                comando.CommandText = "SELECT US#,NombreUsuario,ApellidosUsuario,DireccionUsuario FROM Usuario";
 
-                // 3. Ejecutar la consulta
                 reader = comando.ExecuteReader();
 
-                // 4. Recoger datos de la consulta
+
+                listViewUsuario.Items.Clear();
                 while (reader.Read() )
                 {
-                    // En cada vuelta del while, se recogen los elementos
-                    // de cada tupla de la consulta
-                    // Según el tipo de datos de la base de datos, los datos
-                    // se recogen de manera diferente
-                    //      . varchar   --> GetString
-                    //      . number    ..> GetDecimal
-                    //      - date      --> GetDateTime
-                    string nombre;
+                    string claveUS, nombreUsuario, apellidosUsuario, direccionUsuario;
 
-                    // "SELECT Nombre FROM Autor";
-                    nombre = reader.GetString(0); // --> Nombre : 0
+                    claveUS = reader.GetString(0);
+                    nombreUsuario = reader.GetString(1);
+                    apellidosUsuario = reader.GetString(2);
+                    direccionUsuario = reader.GetString(3);
 
-                    // Copiar los datos al comboBox
-                    comboBoxAutor.Items.Add(nombre);
+                    ListViewItem item = new ListViewItem();
+
+                    item.Text = claveUS;                      // Primera columna
+                    item.SubItems.Add(nombreUsuario);         // Segunda columna
+                    item.SubItems.Add(apellidosUsuario);      // Tercera columna
+                    item.SubItems.Add(direccionUsuario);      // Cuarta  columna
+
+                    listViewUsuario.Items.Add(item);
                 }
-                // 5. Cerrar conexiones
                 reader.Close();
                 conexion.Close();
 
-                MessageBox.Show("Datos cargados con éxito",
+                MessageBox.Show("Usuarios cargados con éxito",
                     "Aplicación de base de datos",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -185,10 +184,137 @@ namespace ADO
             }
         }
 
+        //-----------------CATEGORIA
+        private void cargarCategorias()
+        {
+            try
+            {
+                OracleConnection conexion;
+                OracleCommand comando;
+                OracleDataReader reader;
+
+                conexion = new OracleConnection();
+                conexion.ConnectionString =
+                    "Persist Security Info=False; " +
+                    "Data Source=172.18.35.50/bddam; User ID=BD_DMARCO; Password=47030791T";
+                conexion.Open();
+
+                comando = new OracleCommand();
+                comando.Connection = conexion;
+                comando.CommandText = "SELECT Libro.LI#, Libro.NombreLibro, Libro.Fecha, Categoria.NombreCategoria, Autor.NombreAutor, " + 
+                    "Editorial.NombreEditorial FROM Libro, Categoria, Autor, Editorial WHERE Libro.CA#=Categoria.CA# AND Libro.ED#=Editorial.ED# " + 
+                    "AND Libro.AU#=Autor.AU# ORDER BY LI#";
+
+                reader = comando.ExecuteReader();
+
+
+                listViewCategoriaLibro.Items.Clear();
+                while (reader.Read())
+                {
+                    string claveLI, nombreLibro, fecha, nombreCategoria, nombreAutor, nombreEditorial;
+
+                    // SELECT Libro.LI#, Libro.NombreLibro, Libro.Fecha, Categoria.NombreCategoria, Autor.NombreAutor, Editorial.NombreEditorial
+                    //            0              1               2                  3                      4                      5
+                    claveLI = reader.GetString(0);
+                    nombreLibro = reader.GetString(1);
+                    fecha = reader.GetDateTime(2).ToShortDateString();
+                    nombreCategoria = reader.GetString(3);
+                    nombreAutor = reader.GetString(4);
+                    nombreEditorial = reader.GetString(5);
+
+                    ListViewItem item = new ListViewItem();
+
+                    item.Text = claveLI;                 // Primera columna
+                    item.SubItems.Add(nombreLibro);      // Segunda columna
+                    item.SubItems.Add(fecha);            // Tercera columna
+                    item.SubItems.Add(nombreCategoria);  // Cuarta  columna
+                    item.SubItems.Add(nombreAutor);      // Quinta  columna
+                    item.SubItems.Add(nombreEditorial);  // Sexta   columna
+
+                    listViewCategoriaLibro.Items.Add(item);
+                }
+                reader.Close();
+                conexion.Close();
+
+                MessageBox.Show("Libros cargados con éxito",
+                    "Aplicación de base de datos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show(
+                    "Error en conexión a base de datos: " + ex.Message,
+                    "Aplicación de conexión a base de datos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            try // Count Categoria
+            {
+                OracleConnection conexion;
+                OracleCommand comando;
+                OracleDataReader reader;
+
+                conexion = new OracleConnection();
+                conexion.ConnectionString =
+                    "Persist Security Info=False; " +
+                    "Data Source=172.18.35.50/bddam; User ID=BD_DMARCO; Password=47030791T";
+                conexion.Open();
+
+                comando = new OracleCommand();
+                comando.Connection = conexion;
+                comando.CommandText = "SELECT Categoria.NombreCategoria, COUNT(*) FROM Libro, Categoria WHERE Libro.CA#=Categoria.CA# GROUP BY Categoria.NombreCategoria";
+
+                reader = comando.ExecuteReader();
+
+
+                listViewCategoria.Items.Clear();
+                while (reader.Read())
+                {
+                    string nombreCategoria;
+                    int claveCA;
+
+                    nombreCategoria = reader.GetString(0);
+                    claveCA = (int)reader.GetDecimal(1);
+
+                    ListViewItem item = new ListViewItem();
+
+                    item.Text = nombreCategoria;  // Primera columna
+                    item.SubItems.Add(claveCA.ToString());   // Segunda columna
+
+                    listViewCategoria.Items.Add(item);
+                }
+                reader.Close();
+                conexion.Close();
+            }
+            catch (OracleException ex)
+            {
+                // Mensaje de error si no tiene acceso a la base de datos
+                MessageBox.Show(
+                    "Error en conexión a base de datos: " + ex.Message,
+                    "Aplicación de conexión a base de datos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }//-----------------CATEGORIA
+
+        // Hasta aqui
+
+
+        private void listViewCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listViewCategoria.SelectedItems.Count != 0)
+            {
+                listViewCategoria.Items.Clear();
+                ListViewItem item = listViewCategoria.SelectedItems[0];
+
+                
+            }
+        }
+
+
         private void buttonCargarDatos_Click_1(object sender, EventArgs e)
         {
-            cargarAutores();
+            cargarUsuarios();
             cargarEmpleados();
+            cargarCategorias();
         }
 
         private void listViewEmpleado_SelectedIndexChanged(object sender, EventArgs e)
@@ -198,14 +324,14 @@ namespace ADO
                 // Recogemos el item seleccionado
                 ListViewItem item = listViewEmpleado.SelectedItems[0];
 
-                textBoxApellidosUsuario.Text = item.SubItems[0].Text;         // Primera columna
+                textBoxApellidosEmpleado.Text = item.SubItems[0].Text;   // Primera columna
                 textBoxNombreEmpleado.Text = item.SubItems[1].Text;     // Segunda columna
-                textBoxTurnoEmpleado.Text = item.SubItems[2].Text;       // Tercera columna
-                textBoxEM.Text = item.SubItems[3].Text;  // Cuarta columna
+                textBoxTurnoEmpleado.Text = item.SubItems[2].Text;      // Tercera columna
+                textBoxEM.Text = item.SubItems[3].Text;                 // Cuarta columna
             }
         }
 
-        private void buttonActualizar_Click(object sender, EventArgs e)
+        private void buttonActualizarEmpleado_Click(object sender, EventArgs e)
         {
             try
             {
@@ -226,18 +352,17 @@ namespace ADO
                 comando.Connection = conexion;
 
                 comando.CommandText = "UPDATE Empleado SET " +
-                    "Nombre    = '" + textBoxNombreEmpleado.Text + "'," +
-                    "Edad      = '" + textBoxTurnoEmpleado.Text + "'," +
-                    "Domicilio = '" + textBoxEM.Text + "' " +
-                    "WHERE EM# = '" + textBoxApellidosUsuario.Text + "'";
+                    "EM#='"+ textBoxEM.Text + "'," +
+                    "NombreEmpleado='" + textBoxNombreEmpleado.Text + "'," +
+                    "ApellidosEmpleado='" + textBoxApellidosEmpleado.Text + "'," +
+                    "Turno='" + textBoxTurnoEmpleado.Text + "'" +
+                    "WHERE EM#='" + textBoxTurnoEmpleado.Text + "'";
 
                 // 3. Ejecutar la consulta
                 comando.ExecuteNonQuery();
 
                 // 5. Cerrar conexiones
                 conexion.Close();
-
-                listViewEmpleado.Items.Clear();
 
                 cargarEmpleados();
             }
@@ -263,5 +388,9 @@ namespace ADO
             formAcerca = new FormAcercaDe();
             formAcerca.ShowDialog();
         }
+
+
+
+
     }
 }

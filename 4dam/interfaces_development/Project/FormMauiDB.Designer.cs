@@ -36,7 +36,7 @@
             this.columnHeaderApellidosEmpleado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderTurnoEmpleado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.labelEM = new System.Windows.Forms.Label();
-            this.textBoxApellidosUsuario = new System.Windows.Forms.TextBox();
+            this.textBoxApellidosEmpleado = new System.Windows.Forms.TextBox();
             this.labelNombre = new System.Windows.Forms.Label();
             this.textBoxNombreEmpleado = new System.Windows.Forms.TextBox();
             this.labelApellidosEmpleado = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@
             this.labelNombreUsuario = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.labelUS = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewUsuario = new System.Windows.Forms.ListView();
             this.columnHeaderUS = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderNombreUsuario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderApellidosUsuario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -76,34 +76,36 @@
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPageCategorias = new System.Windows.Forms.TabPage();
             this.buttonCargarLibrosCategorias = new System.Windows.Forms.Button();
-            this.listBoxCategorias = new System.Windows.Forms.ListBox();
-            this.listViewCategorias = new System.Windows.Forms.ListView();
+            this.listViewCategoriaLibro = new System.Windows.Forms.ListView();
             this.columnHeaderLICategoria = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderNombreCategoria = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderFechaCategoria = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderEditorialCategoria = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tabPageEstilos = new System.Windows.Forms.TabPage();
-            this.listBoxEstilos = new System.Windows.Forms.ListBox();
-            this.buttonCargarLibrosEstilos = new System.Windows.Forms.Button();
-            this.tabPageAutores = new System.Windows.Forms.TabPage();
-            this.buttonCargarLibrosAutores = new System.Windows.Forms.Button();
-            this.imageListAplicacion = new System.Windows.Forms.ImageList(this.components);
-            this.buttonClose = new System.Windows.Forms.Button();
-            this.buttonAcercaDe = new System.Windows.Forms.Button();
-            this.buttonCargarDatos = new System.Windows.Forms.Button();
             this.columnHeaderAutorCategoria = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabPageEstilos = new System.Windows.Forms.TabPage();
             this.listView2 = new System.Windows.Forms.ListView();
             this.columnHeaderLIEstilo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderNombreEstilo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderFechaEstilo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderEditorialEstilo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderAutorEstilo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listBoxEstilos = new System.Windows.Forms.ListBox();
+            this.buttonCargarLibrosEstilos = new System.Windows.Forms.Button();
+            this.tabPageAutores = new System.Windows.Forms.TabPage();
+            this.listBoxAutores = new System.Windows.Forms.ListBox();
             this.listView3 = new System.Windows.Forms.ListView();
             this.columnHeaderLIAutor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderNombreAutor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderFechaAutor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderEditorialAutor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listBoxAutores = new System.Windows.Forms.ListBox();
+            this.buttonCargarLibrosAutores = new System.Windows.Forms.Button();
+            this.imageListAplicacion = new System.Windows.Forms.ImageList(this.components);
+            this.buttonClose = new System.Windows.Forms.Button();
+            this.buttonAcercaDe = new System.Windows.Forms.Button();
+            this.buttonCargarDatos = new System.Windows.Forms.Button();
+            this.listViewCategoria = new System.Windows.Forms.ListView();
+            this.columnHeaderColumnaLV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderCountLV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1.SuspendLayout();
             this.tabPagePrestamo.SuspendLayout();
             this.tabPagePersonas.SuspendLayout();
@@ -162,13 +164,13 @@
             this.labelEM.TabIndex = 4;
             this.labelEM.Text = "EM#";
             // 
-            // textBoxApellidosUsuario
+            // textBoxApellidosEmpleado
             // 
-            this.textBoxApellidosUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBoxApellidosUsuario.Location = new System.Drawing.Point(127, 309);
-            this.textBoxApellidosUsuario.Name = "textBoxApellidosUsuario";
-            this.textBoxApellidosUsuario.Size = new System.Drawing.Size(144, 33);
-            this.textBoxApellidosUsuario.TabIndex = 5;
+            this.textBoxApellidosEmpleado.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxApellidosEmpleado.Location = new System.Drawing.Point(127, 309);
+            this.textBoxApellidosEmpleado.Name = "textBoxApellidosEmpleado";
+            this.textBoxApellidosEmpleado.Size = new System.Drawing.Size(144, 33);
+            this.textBoxApellidosEmpleado.TabIndex = 5;
             // 
             // labelNombre
             // 
@@ -309,7 +311,7 @@
             this.tabPageEmpleados.Controls.Add(this.labelTurnoempleado);
             this.tabPageEmpleados.Controls.Add(this.labelApellidosEmpleado);
             this.tabPageEmpleados.Controls.Add(this.textBoxEM);
-            this.tabPageEmpleados.Controls.Add(this.textBoxApellidosUsuario);
+            this.tabPageEmpleados.Controls.Add(this.textBoxApellidosEmpleado);
             this.tabPageEmpleados.Controls.Add(this.textBoxNombreEmpleado);
             this.tabPageEmpleados.Controls.Add(this.labelNombre);
             this.tabPageEmpleados.Controls.Add(this.textBoxTurnoEmpleado);
@@ -356,7 +358,7 @@
             this.buttonActualizarEmpleado.TabIndex = 6;
             this.buttonActualizarEmpleado.Text = "Actualizar";
             this.buttonActualizarEmpleado.UseVisualStyleBackColor = true;
-            this.buttonActualizarEmpleado.Click += new System.EventHandler(this.buttonActualizar_Click);
+            this.buttonActualizarEmpleado.Click += new System.EventHandler(this.buttonActualizarEmpleado_Click);
             // 
             // tabPageUsuarios
             // 
@@ -373,7 +375,7 @@
             this.tabPageUsuarios.Controls.Add(this.labelNombreUsuario);
             this.tabPageUsuarios.Controls.Add(this.textBox4);
             this.tabPageUsuarios.Controls.Add(this.labelUS);
-            this.tabPageUsuarios.Controls.Add(this.listView1);
+            this.tabPageUsuarios.Controls.Add(this.listViewUsuario);
             this.tabPageUsuarios.Location = new System.Drawing.Point(4, 35);
             this.tabPageUsuarios.Name = "tabPageUsuarios";
             this.tabPageUsuarios.Size = new System.Drawing.Size(694, 401);
@@ -480,24 +482,24 @@
             this.labelUS.AutoSize = true;
             this.labelUS.Location = new System.Drawing.Point(22, 244);
             this.labelUS.Name = "labelUS";
-            this.labelUS.Size = new System.Drawing.Size(50, 26);
+            this.labelUS.Size = new System.Drawing.Size(45, 26);
             this.labelUS.TabIndex = 12;
-            this.labelUS.Text = "EM#";
+            this.labelUS.Text = "US#";
             // 
-            // listView1
+            // listViewUsuario
             // 
-            this.listView1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.listViewUsuario.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderUS,
             this.columnHeaderNombreUsuario,
             this.columnHeaderApellidosUsuario,
             this.columnHeaderDireccionUsuario});
-            this.listView1.Location = new System.Drawing.Point(5, 6);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(682, 218);
-            this.listView1.TabIndex = 10;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listViewUsuario.Location = new System.Drawing.Point(5, 6);
+            this.listViewUsuario.Name = "listViewUsuario";
+            this.listViewUsuario.Size = new System.Drawing.Size(682, 218);
+            this.listViewUsuario.TabIndex = 10;
+            this.listViewUsuario.UseCompatibleStateImageBehavior = false;
+            this.listViewUsuario.View = System.Windows.Forms.View.Details;
             // 
             // columnHeaderUS
             // 
@@ -543,9 +545,9 @@
             // tabPageCategorias
             // 
             this.tabPageCategorias.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPageCategorias.Controls.Add(this.listViewCategoria);
             this.tabPageCategorias.Controls.Add(this.buttonCargarLibrosCategorias);
-            this.tabPageCategorias.Controls.Add(this.listBoxCategorias);
-            this.tabPageCategorias.Controls.Add(this.listViewCategorias);
+            this.tabPageCategorias.Controls.Add(this.listViewCategoriaLibro);
             this.tabPageCategorias.Location = new System.Drawing.Point(4, 35);
             this.tabPageCategorias.Name = "tabPageCategorias";
             this.tabPageCategorias.Padding = new System.Windows.Forms.Padding(3);
@@ -562,30 +564,21 @@
             this.buttonCargarLibrosCategorias.Text = "Cargar Libros";
             this.buttonCargarLibrosCategorias.UseVisualStyleBackColor = true;
             // 
-            // listBoxCategorias
+            // listViewCategoriaLibro
             // 
-            this.listBoxCategorias.FormattingEnabled = true;
-            this.listBoxCategorias.ItemHeight = 26;
-            this.listBoxCategorias.Location = new System.Drawing.Point(6, 230);
-            this.listBoxCategorias.Name = "listBoxCategorias";
-            this.listBoxCategorias.Size = new System.Drawing.Size(169, 160);
-            this.listBoxCategorias.TabIndex = 10;
-            // 
-            // listViewCategorias
-            // 
-            this.listViewCategorias.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.listViewCategorias.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewCategoriaLibro.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.listViewCategoriaLibro.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderLICategoria,
             this.columnHeaderNombreCategoria,
             this.columnHeaderFechaCategoria,
             this.columnHeaderEditorialCategoria,
             this.columnHeaderAutorCategoria});
-            this.listViewCategorias.Location = new System.Drawing.Point(3, 6);
-            this.listViewCategorias.Name = "listViewCategorias";
-            this.listViewCategorias.Size = new System.Drawing.Size(682, 218);
-            this.listViewCategorias.TabIndex = 3;
-            this.listViewCategorias.UseCompatibleStateImageBehavior = false;
-            this.listViewCategorias.View = System.Windows.Forms.View.Details;
+            this.listViewCategoriaLibro.Location = new System.Drawing.Point(3, 6);
+            this.listViewCategoriaLibro.Name = "listViewCategoriaLibro";
+            this.listViewCategoriaLibro.Size = new System.Drawing.Size(682, 218);
+            this.listViewCategoriaLibro.TabIndex = 3;
+            this.listViewCategoriaLibro.UseCompatibleStateImageBehavior = false;
+            this.listViewCategoriaLibro.View = System.Windows.Forms.View.Details;
             // 
             // columnHeaderLICategoria
             // 
@@ -607,6 +600,11 @@
             this.columnHeaderEditorialCategoria.Text = "Editorial";
             this.columnHeaderEditorialCategoria.Width = 114;
             // 
+            // columnHeaderAutorCategoria
+            // 
+            this.columnHeaderAutorCategoria.Text = "Autor";
+            this.columnHeaderAutorCategoria.Width = 141;
+            // 
             // tabPageEstilos
             // 
             this.tabPageEstilos.BackColor = System.Drawing.Color.Gainsboro;
@@ -618,6 +616,47 @@
             this.tabPageEstilos.Size = new System.Drawing.Size(694, 401);
             this.tabPageEstilos.TabIndex = 2;
             this.tabPageEstilos.Text = "Estilos";
+            // 
+            // listView2
+            // 
+            this.listView2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderLIEstilo,
+            this.columnHeaderNombreEstilo,
+            this.columnHeaderFechaEstilo,
+            this.columnHeaderEditorialEstilo,
+            this.columnHeaderAutorEstilo});
+            this.listView2.Location = new System.Drawing.Point(3, 6);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(682, 218);
+            this.listView2.TabIndex = 24;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeaderLIEstilo
+            // 
+            this.columnHeaderLIEstilo.Text = "LI#";
+            this.columnHeaderLIEstilo.Width = 69;
+            // 
+            // columnHeaderNombreEstilo
+            // 
+            this.columnHeaderNombreEstilo.Text = "Nombre";
+            this.columnHeaderNombreEstilo.Width = 204;
+            // 
+            // columnHeaderFechaEstilo
+            // 
+            this.columnHeaderFechaEstilo.Text = "Fecha";
+            this.columnHeaderFechaEstilo.Width = 148;
+            // 
+            // columnHeaderEditorialEstilo
+            // 
+            this.columnHeaderEditorialEstilo.Text = "Editorial";
+            this.columnHeaderEditorialEstilo.Width = 114;
+            // 
+            // columnHeaderAutorEstilo
+            // 
+            this.columnHeaderAutorEstilo.Text = "Autor";
+            this.columnHeaderAutorEstilo.Width = 141;
             // 
             // listBoxEstilos
             // 
@@ -648,6 +687,50 @@
             this.tabPageAutores.Size = new System.Drawing.Size(694, 401);
             this.tabPageAutores.TabIndex = 3;
             this.tabPageAutores.Text = "Autores";
+            // 
+            // listBoxAutores
+            // 
+            this.listBoxAutores.FormattingEnabled = true;
+            this.listBoxAutores.ItemHeight = 26;
+            this.listBoxAutores.Location = new System.Drawing.Point(6, 231);
+            this.listBoxAutores.Name = "listBoxAutores";
+            this.listBoxAutores.Size = new System.Drawing.Size(169, 160);
+            this.listBoxAutores.TabIndex = 25;
+            // 
+            // listView3
+            // 
+            this.listView3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderLIAutor,
+            this.columnHeaderNombreAutor,
+            this.columnHeaderFechaAutor,
+            this.columnHeaderEditorialAutor});
+            this.listView3.Location = new System.Drawing.Point(3, 6);
+            this.listView3.Name = "listView3";
+            this.listView3.Size = new System.Drawing.Size(682, 218);
+            this.listView3.TabIndex = 24;
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.listView3.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeaderLIAutor
+            // 
+            this.columnHeaderLIAutor.Text = "LI#";
+            this.columnHeaderLIAutor.Width = 69;
+            // 
+            // columnHeaderNombreAutor
+            // 
+            this.columnHeaderNombreAutor.Text = "Nombre";
+            this.columnHeaderNombreAutor.Width = 204;
+            // 
+            // columnHeaderFechaAutor
+            // 
+            this.columnHeaderFechaAutor.Text = "Fecha";
+            this.columnHeaderFechaAutor.Width = 148;
+            // 
+            // columnHeaderEditorialAutor
+            // 
+            this.columnHeaderEditorialAutor.Text = "Editorial";
+            this.columnHeaderEditorialAutor.Width = 114;
             // 
             // buttonCargarLibrosAutores
             // 
@@ -715,95 +798,27 @@
             this.buttonCargarDatos.UseVisualStyleBackColor = false;
             this.buttonCargarDatos.Click += new System.EventHandler(this.buttonCargarDatos_Click_1);
             // 
-            // columnHeaderAutorCategoria
+            // listViewCategoria
             // 
-            this.columnHeaderAutorCategoria.Text = "Autor";
-            this.columnHeaderAutorCategoria.Width = 141;
+            this.listViewCategoria.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderColumnaLV,
+            this.columnHeaderCountLV});
+            this.listViewCategoria.Location = new System.Drawing.Point(6, 230);
+            this.listViewCategoria.Name = "listViewCategoria";
+            this.listViewCategoria.Size = new System.Drawing.Size(215, 157);
+            this.listViewCategoria.TabIndex = 24;
+            this.listViewCategoria.UseCompatibleStateImageBehavior = false;
+            this.listViewCategoria.View = System.Windows.Forms.View.Details;
+            this.listViewCategoria.SelectedIndexChanged += new System.EventHandler(this.listViewCategoria_SelectedIndexChanged);
             // 
-            // listView2
+            // columnHeaderColumnaLV
             // 
-            this.listView2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeaderLIEstilo,
-            this.columnHeaderNombreEstilo,
-            this.columnHeaderFechaEstilo,
-            this.columnHeaderEditorialEstilo,
-            this.columnHeaderAutorEstilo});
-            this.listView2.Location = new System.Drawing.Point(3, 6);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(682, 218);
-            this.listView2.TabIndex = 24;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
+            this.columnHeaderColumnaLV.Text = "Categoria";
+            this.columnHeaderColumnaLV.Width = 116;
             // 
-            // columnHeaderLIEstilo
+            // columnHeaderCountLV
             // 
-            this.columnHeaderLIEstilo.Text = "LI#";
-            this.columnHeaderLIEstilo.Width = 69;
-            // 
-            // columnHeaderNombreEstilo
-            // 
-            this.columnHeaderNombreEstilo.Text = "Nombre";
-            this.columnHeaderNombreEstilo.Width = 204;
-            // 
-            // columnHeaderFechaEstilo
-            // 
-            this.columnHeaderFechaEstilo.Text = "Fecha";
-            this.columnHeaderFechaEstilo.Width = 148;
-            // 
-            // columnHeaderEditorialEstilo
-            // 
-            this.columnHeaderEditorialEstilo.Text = "Editorial";
-            this.columnHeaderEditorialEstilo.Width = 114;
-            // 
-            // columnHeaderAutorEstilo
-            // 
-            this.columnHeaderAutorEstilo.Text = "Autor";
-            this.columnHeaderAutorEstilo.Width = 141;
-            // 
-            // listView3
-            // 
-            this.listView3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeaderLIAutor,
-            this.columnHeaderNombreAutor,
-            this.columnHeaderFechaAutor,
-            this.columnHeaderEditorialAutor});
-            this.listView3.Location = new System.Drawing.Point(3, 6);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(682, 218);
-            this.listView3.TabIndex = 24;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeaderLIAutor
-            // 
-            this.columnHeaderLIAutor.Text = "LI#";
-            this.columnHeaderLIAutor.Width = 69;
-            // 
-            // columnHeaderNombreAutor
-            // 
-            this.columnHeaderNombreAutor.Text = "Nombre";
-            this.columnHeaderNombreAutor.Width = 204;
-            // 
-            // columnHeaderFechaAutor
-            // 
-            this.columnHeaderFechaAutor.Text = "Fecha";
-            this.columnHeaderFechaAutor.Width = 148;
-            // 
-            // columnHeaderEditorialAutor
-            // 
-            this.columnHeaderEditorialAutor.Text = "Editorial";
-            this.columnHeaderEditorialAutor.Width = 114;
-            // 
-            // listBoxAutores
-            // 
-            this.listBoxAutores.FormattingEnabled = true;
-            this.listBoxAutores.ItemHeight = 26;
-            this.listBoxAutores.Location = new System.Drawing.Point(6, 231);
-            this.listBoxAutores.Name = "listBoxAutores";
-            this.listBoxAutores.Size = new System.Drawing.Size(169, 160);
-            this.listBoxAutores.TabIndex = 25;
+            this.columnHeaderCountLV.Text = "Num.";
             // 
             // FormMauiDB
             // 
@@ -821,7 +836,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormMauiDB";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aplicacion de Base de Datos";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
@@ -852,7 +867,7 @@
         private System.Windows.Forms.ColumnHeader columnHeaderApellidosEmpleado;
         private System.Windows.Forms.ColumnHeader columnHeaderTurnoEmpleado;
         private System.Windows.Forms.Label labelEM;
-        private System.Windows.Forms.TextBox textBoxApellidosUsuario;
+        private System.Windows.Forms.TextBox textBoxApellidosEmpleado;
         private System.Windows.Forms.Label labelNombre;
         private System.Windows.Forms.TextBox textBoxNombreEmpleado;
         private System.Windows.Forms.Label labelApellidosEmpleado;
@@ -887,7 +902,7 @@
         private System.Windows.Forms.Label labelNombreUsuario;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label labelUS;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewUsuario;
         private System.Windows.Forms.ColumnHeader columnHeaderUS;
         private System.Windows.Forms.ColumnHeader columnHeaderNombreUsuario;
         private System.Windows.Forms.ColumnHeader columnHeaderApellidosUsuario;
@@ -895,7 +910,7 @@
         private System.Windows.Forms.TabPage tabPageLibros;
         private System.Windows.Forms.TabControl tabControl3;
         private System.Windows.Forms.TabPage tabPageCategorias;
-        private System.Windows.Forms.ListView listViewCategorias;
+        private System.Windows.Forms.ListView listViewCategoriaLibro;
         private System.Windows.Forms.ColumnHeader columnHeaderLICategoria;
         private System.Windows.Forms.ColumnHeader columnHeaderNombreCategoria;
         private System.Windows.Forms.ColumnHeader columnHeaderFechaCategoria;
@@ -903,7 +918,6 @@
         private System.Windows.Forms.TabPage tabPageEstilos;
         private System.Windows.Forms.Button buttonCargarLibrosEstilos;
         private System.Windows.Forms.TabPage tabPageAutores;
-        private System.Windows.Forms.ListBox listBoxCategorias;
         private System.Windows.Forms.ListBox listBoxEstilos;
         private System.Windows.Forms.Button buttonCargarLibrosCategorias;
         private System.Windows.Forms.Button buttonCargarLibrosAutores;
@@ -920,6 +934,9 @@
         private System.Windows.Forms.ColumnHeader columnHeaderFechaAutor;
         private System.Windows.Forms.ColumnHeader columnHeaderEditorialAutor;
         private System.Windows.Forms.ListBox listBoxAutores;
+        private System.Windows.Forms.ListView listViewCategoria;
+        private System.Windows.Forms.ColumnHeader columnHeaderColumnaLV;
+        private System.Windows.Forms.ColumnHeader columnHeaderCountLV;
 
     }
 }
