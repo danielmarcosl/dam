@@ -459,7 +459,7 @@ namespace ADO
 
                 reader = comando.ExecuteReader();
 
-                listViewEstilo.Items.Clear();
+                listViewAutores.Items.Clear();
                 while (reader.Read())
                 {
                     string nombreEstilo;
@@ -473,7 +473,7 @@ namespace ADO
                     item.Text = nombreEstilo;  // Primera columna
                     item.SubItems.Add(claveES.ToString());   // Segunda columna
 
-                    listViewEstilo.Items.Add(item);
+                    listViewAutores.Items.Add(item);
                 }
                 reader.Close();
                 conexion.Close();
@@ -489,7 +489,7 @@ namespace ADO
         }// AUTORES
 
 
-        // AUTORES
+        // PRESTAMOS
         private void cargarPrestamos()
         {
             try
@@ -506,31 +506,33 @@ namespace ADO
 
                 comando = new OracleCommand();
                 comando.Connection = conexion;
-                comando.CommandText = "SELECT Libro.LI#, Libro.NombreLibro, Libro.Fecha, Autor.AU#, Editorial.NombreEditorial FROM Libro, Autor, " +
-                    "Editorial WHERE Libro.ED#=Editorial.ED# AND Libro.AU#=Autor.AU# ORDER BY LI#";
+                comando.CommandText = "SELECT Prestamo.PR#, Prestamo.FechaRecogida, Prestamo.FechaEntrega, Usuario.NombreUsuario, Libro.NombreLibro, " +
+                    "Empleado.NombreEmpleado FROM Prestamo, Usuario, Libro, Empleado WHERE Usuario.Us#=Prestamo.US# AND Empleado.EM#=Prestamo.EM# AND Libro.LI#=Prestamo.LI#";
 
                 reader = comando.ExecuteReader();
 
-                listViewAutoresLibro.Items.Clear();
+                listViewPrestamos.Items.Clear();
                 while (reader.Read())
                 {
-                    string claveLI, nombreLibro, fecha, nombreAutor, nombreEditorial;
+                    string clavePR, fechaRecogida, fechaEntrega, nombreUsuario, nombreLibro, nombreEmpleado;
 
-                    claveLI = reader.GetString(0);
-                    nombreLibro = reader.GetString(1);
-                    fecha = reader.GetDateTime(2).ToShortDateString();
-                    nombreAutor = reader.GetString(3);
-                    nombreEditorial = reader.GetString(4);
+                    clavePR = reader.GetString(0);
+                    fechaRecogida = reader.GetDateTime(1).ToShortDateString();
+                    fechaEntrega = reader.GetDateTime(2).ToShortDateString();
+                    nombreUsuario = reader.GetString(3);
+                    nombreLibro = reader.GetString(4);
+                    nombreEmpleado = reader.GetString(5);
 
                     ListViewItem item = new ListViewItem();
 
-                    item.Text = claveLI;                 // Primera columna
-                    item.SubItems.Add(nombreLibro);      // Segunda columna
-                    item.SubItems.Add(fecha);            // Tercera columna
-                    item.SubItems.Add(nombreAutor);      // Cuarta  columna
-                    item.SubItems.Add(nombreEditorial);  // Quinta  columna
+                    item.Text = clavePR;                 // Primera columna
+                    item.SubItems.Add(fechaRecogida);    // Segunda columna
+                    item.SubItems.Add(fechaEntrega);     // Tercera columna
+                    item.SubItems.Add(nombreUsuario);    // Cuarta  columna
+                    item.SubItems.Add(nombreLibro);      // Quinta  columna
+                    item.SubItems.Add(nombreEmpleado);   // Sexta   columna
 
-                    listViewAutoresLibro.Items.Add(item);
+                    listViewPrestamos.Items.Add(item);
                 }
                 reader.Close();
                 conexion.Close();
@@ -600,7 +602,7 @@ namespace ADO
                 textBoxCategoriaLI.Text = item.SubItems[0].Text;         // Primera Columna
                 textBoxCategoriaNombre.Text = item.SubItems[1].Text;     // Segunda Columna
                 textBoxCategoriaFecha.Text = item.SubItems[2].Text;      // Tercera Columna
-                textBoxCategoriaEditorial.Text = item.SubItems[3].Text;  // Cuarta  Columna
+                textBoxCategoriaEditorial.Text = item.SubItems[5].Text;  // Cuarta  Columna
                 textBoxCategoriaAutor.Text = item.SubItems[4].Text;      // Quinta  Columna
             }
         }
@@ -615,7 +617,7 @@ namespace ADO
                 textBoxEstiloLI.Text = item.SubItems[0].Text;         // Primera Columna
                 textBoxEstiloNombre.Text = item.SubItems[1].Text;     // Segunda Columna
                 textBoxEstiloFecha.Text = item.SubItems[2].Text;      // Tercera Columna
-                textBoxEstiloEditorial.Text = item.SubItems[3].Text;  // Cuarta  Columna
+                textBoxEstiloEditorial.Text = item.SubItems[5].Text;  // Cuarta  Columna
                 textBoxEstiloAutor.Text = item.SubItems[4].Text;      // Quinta  Columna
             }
         }
@@ -630,7 +632,7 @@ namespace ADO
                 textBoxAutorLI.Text = item.SubItems[0].Text;         // Primera Columna
                 textBoxAutorNombre.Text = item.SubItems[1].Text;     // Segunda Columna
                 textBoxAutorFecha.Text = item.SubItems[2].Text;      // Tercera Columna
-                textBoxAutorEditorial.Text = item.SubItems[3].Text;  // Cuarta  Columna
+                textBoxAutorEditorial.Text = item.SubItems[4].Text;  // Cuarta  Columna
             }
         }
 
@@ -662,7 +664,26 @@ namespace ADO
             }
         }
 
-        //------------------------
+        // TEXTBOX PRESTAMOS
+        private void listViewPrestamos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listViewPrestamos.SelectedItems.Count != 0)
+            {
+                ListViewItem item = listViewPrestamos.SelectedItems[0];
+
+                textBoxPrestamosPR.Text = item.SubItems[0].Text;              // Cuarta columna
+                textBoxPrestamosFechaRecogida.Text = item.SubItems[1].Text;   // Quinta columna
+                textBoxPrestamosFechaEntrega.Text = item.SubItems[2].Text;    // Sexta columna
+                textBoxPrestamosUsuario.Text = item.SubItems[3].Text;        // Primera columna
+                textBoxPrestamosEmpleado.Text = item.SubItems[4].Text;       // Segunda columna
+                textBoxPrestamosLibro.Text = item.SubItems[5].Text;          // Tercera columna
+
+            }
+        }
+
+        //------------------------//
+        //         BOTONES        //
+        //------------------------//
 
         // BOTON ACTUALIZAR EMPLEADO
         private void buttonActualizarEmpleado_Click(object sender, EventArgs e)
@@ -780,7 +801,6 @@ namespace ADO
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //--
         // BOTON ACTUALIZAR USUARIO
         private void buttonActualizarUsuario_Click(object sender, EventArgs e)
         {
@@ -890,16 +910,426 @@ namespace ADO
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //--
+        // BOTON ACTUALIZAR CATEGORIA
+        private void buttonCategoriaActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OracleConnection conexion;
+                OracleCommand comando;
 
+                conexion = new OracleConnection();
+                conexion.ConnectionString =
+                    "Persist Security Info=False; " +
+                    "Data Source=172.18.35.50/bddam; User ID=BD_DMARCO; Password=47030791T";
+                conexion.Open();
+
+                comando = new OracleCommand();
+                comando.Connection = conexion;
+
+                comando.CommandText = "UPDATE Libro SET " +
+                    "LI#='" + textBoxCategoriaLI.Text + "'," +
+                    "NombreLibro='" + textBoxCategoriaNombre.Text + "'," +
+                    "Fecha='" + textBoxCategoriaFecha.Text + "'," +
+                    "ED#='" + textBoxCategoriaEditorial + "'," +
+                    "AU#='" + textBoxCategoriaAutor.Text + "'" +
+                    "WHERE LI#='" + textBoxCategoriaLI.Text + "'";
+
+                comando.ExecuteNonQuery();
+
+                conexion.Close();
+
+                cargarCategorias();
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show(
+                    "Error al actualizar Usuario: " + ex.Message,
+                    "Aplicación de conexión a base de datos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        // BOTON BORRAR CATEGORIA
+        private void buttonCategoriaBorrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OracleConnection conexion;
+                OracleCommand comando;
+
+                conexion = new OracleConnection();
+                conexion.ConnectionString =
+                    "Persist Security Info=False; " +
+                    "Data Source=172.18.35.50/bddam; User ID=BD_DMARCO; Password=47030791T";
+                conexion.Open();
+
+                comando = new OracleCommand();
+                comando.Connection = conexion;
+
+                comando.CommandText = "DELETE FROM Libro WHERE " +
+                    "LI#='" + textBoxCategoriaLI.Text + "'";
+
+                comando.ExecuteNonQuery();
+
+                conexion.Close();
+
+                cargarCategorias();
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show(
+                    "Error al borrar Usuario: " + ex.Message,
+                    "Aplicación de conexión a base de datos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        // BOTON CREAR CATEGORIA
+        private void buttonCategoriaCrear_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OracleConnection conexion;
+                OracleCommand comando;
+
+                conexion = new OracleConnection();
+                conexion.ConnectionString =
+                    "Persist Security Info=False; " +
+                    "Data Source=172.18.35.50/bddam; User ID=BD_DMARCO; Password=47030791T";
+                conexion.Open();
+
+                comando = new OracleCommand();
+                comando.Connection = conexion;
+
+                comando.CommandText = "INSERT INTO Libro VALUES (" +
+                    "'" + textBoxCategoriaLI.Text + "'," +
+                    "'" + textBoxCategoriaNombre.Text + "'," +
+                    "'" + textBoxCategoriaFecha.Text + "'," +
+                    "'" + textBoxCategoriaEditorial.Text + "'," +
+                    "'" + textBoxCategoriaAutor.Text + "'";
+
+                comando.ExecuteNonQuery();
+
+                conexion.Close();
+
+                cargarCategorias();
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show(
+                    "Error al crear Usuario: " + ex.Message,
+                    "Aplicación de conexión a base de datos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        // BOTON ACTUALIZAR ESTILO
+        private void buttonEstiloActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OracleConnection conexion;
+                OracleCommand comando;
+
+                conexion = new OracleConnection();
+                conexion.ConnectionString =
+                    "Persist Security Info=False; " +
+                    "Data Source=172.18.35.50/bddam; User ID=BD_DMARCO; Password=47030791T";
+                conexion.Open();
+
+                comando = new OracleCommand();
+                comando.Connection = conexion;
+
+                comando.CommandText = "UPDATE Libro SET " +
+                    "LI#='" + textBoxEstiloLI.Text + "'," +
+                    "NombreLibro='" + textBoxEstiloNombre.Text + "'," +
+                    "Fecha='" + textBoxEstiloFecha.Text + "'," +
+                    "ED#='" + textBoxEstiloEditorial + "'," +
+                    "AU#='" + textBoxEstiloAutor.Text + "'" +
+                    "WHERE LI#='" + textBoxEstiloLI.Text + "'";
+
+                comando.ExecuteNonQuery();
+
+                conexion.Close();
+
+                cargarEstilos();
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show(
+                    "Error al actualizar Usuario: " + ex.Message,
+                    "Aplicación de conexión a base de datos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        // BOTON BORRAR ESTILO
+        private void buttonEstiloBorrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OracleConnection conexion;
+                OracleCommand comando;
+
+                conexion = new OracleConnection();
+                conexion.ConnectionString =
+                    "Persist Security Info=False; " +
+                    "Data Source=172.18.35.50/bddam; User ID=BD_DMARCO; Password=47030791T";
+                conexion.Open();
+
+                comando = new OracleCommand();
+                comando.Connection = conexion;
+
+                comando.CommandText = "DELETE FROM Libro WHERE " +
+                    "LI#='" + textBoxEstiloLI.Text + "'";
+
+                comando.ExecuteNonQuery();
+
+                conexion.Close();
+
+                cargarEstilos();
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show(
+                    "Error al borrar Usuario: " + ex.Message,
+                    "Aplicación de conexión a base de datos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        // BOTON CREAR ESTILO
+        private void buttonEstiloCrear_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OracleConnection conexion;
+                OracleCommand comando;
+
+                conexion = new OracleConnection();
+                conexion.ConnectionString =
+                    "Persist Security Info=False; " +
+                    "Data Source=172.18.35.50/bddam; User ID=BD_DMARCO; Password=47030791T";
+                conexion.Open();
+
+                comando = new OracleCommand();
+                comando.Connection = conexion;
+
+                comando.CommandText = "INSERT INTO Libro VALUES (" +
+                    "'" + textBoxEstiloLI.Text + "'," +
+                    "'" + textBoxEstiloNombre.Text + "'," +
+                    "'" + textBoxEstiloFecha.Text + "'," +
+                    "'" + textBoxEstiloEditorial.Text + "'," +
+                    "'" + textBoxEstiloAutor.Text + "'";
+
+                comando.ExecuteNonQuery();
+
+                conexion.Close();
+
+                cargarEstilos();
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show(
+                    "Error al crear Usuario: " + ex.Message,
+                    "Aplicación de conexión a base de datos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        // BOTON ACTUALIZAR AUTOR
+        private void buttonAutorActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OracleConnection conexion;
+                OracleCommand comando;
+
+                conexion = new OracleConnection();
+                conexion.ConnectionString =
+                    "Persist Security Info=False; " +
+                    "Data Source=172.18.35.50/bddam; User ID=BD_DMARCO; Password=47030791T";
+                conexion.Open();
+
+                comando = new OracleCommand();
+                comando.Connection = conexion;
+
+                comando.CommandText = "UPDATE Libro SET " +
+                    "LI#='" + textBoxAutorLI.Text + "'," +
+                    "NombreLibro='" + textBoxAutorNombre.Text + "'," +
+                    "Fecha='" + textBoxAutorFecha.Text + "'," +
+                    "ED#='" + textBoxAutorEditorial + "'" +
+                    "WHERE LI#='" + textBoxAutorLI.Text + "'";
+
+                comando.ExecuteNonQuery();
+
+                conexion.Close();
+
+                cargarAutores();
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show(
+                    "Error al actualizar Usuario: " + ex.Message,
+                    "Aplicación de conexión a base de datos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        // BOTON BORRAR AUTORES
+        private void buttonAutorBorrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OracleConnection conexion;
+                OracleCommand comando;
+
+                conexion = new OracleConnection();
+                conexion.ConnectionString =
+                    "Persist Security Info=False; " +
+                    "Data Source=172.18.35.50/bddam; User ID=BD_DMARCO; Password=47030791T";
+                conexion.Open();
+
+                comando = new OracleCommand();
+                comando.Connection = conexion;
+
+                comando.CommandText = "DELETE FROM Libro WHERE " +
+                    "LI#='" + textBoxAutorLI.Text + "'";
+
+                comando.ExecuteNonQuery();
+
+                conexion.Close();
+
+                cargarAutores();
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show(
+                    "Error al borrar Usuario: " + ex.Message,
+                    "Aplicación de conexión a base de datos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        // BOTON CREAR AUTORES
+        private void buttonAutorCrear_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OracleConnection conexion;
+                OracleCommand comando;
+
+                conexion = new OracleConnection();
+                conexion.ConnectionString =
+                    "Persist Security Info=False; " +
+                    "Data Source=172.18.35.50/bddam; User ID=BD_DMARCO; Password=47030791T";
+                conexion.Open();
+
+                comando = new OracleCommand();
+                comando.Connection = conexion;
+
+                comando.CommandText = "INSERT INTO Libro VALUES (" +
+                    "'" + textBoxAutorLI.Text + "'," +
+                    "'" + textBoxAutorNombre.Text + "'," +
+                    "'" + textBoxAutorFecha.Text + "'," +
+                    "'" + textBoxAutorEditorial.Text + "'";
+
+                comando.ExecuteNonQuery();
+
+                conexion.Close();
+
+                cargarAutores();
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show(
+                    "Error al crear Usuario: " + ex.Message,
+                    "Aplicación de conexión a base de datos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        // BOTON ACTUALIZAR PRESTAMO
+        private void buttonPrestamosActualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OracleConnection conexion;
+                OracleCommand comando;
+
+                conexion = new OracleConnection();
+                conexion.ConnectionString =
+                    "Persist Security Info=False; " +
+                    "Data Source=172.18.35.50/bddam; User ID=BD_DMARCO; Password=47030791T";
+                conexion.Open();
+
+                comando = new OracleCommand();
+                comando.Connection = conexion;
+
+                comando.CommandText = "UPDATE Prestamo SET " +
+                "PR#='" + textBoxPrestamosPR +
+                "', FechaRecogida='" + textBoxPrestamosFechaRecogida +
+                "', FechaEntrega='" + textBoxPrestamosFechaEntrega +
+                "', US#='" + textBoxPrestamosUsuario +
+                "', EM='" + textBoxPrestamosEmpleado +
+                "', LI#='" + textBoxPrestamosLibro +
+                "' WHERE PR#='" + textBoxPrestamosPR + "'";
+
+                comando.ExecuteNonQuery();
+
+                conexion.Close();
+
+                cargarPrestamos();
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show(
+                    "Error al actualizar Préstamo: " + ex.Message,
+                    "Aplicación de conexión a base de datos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        // BOTON CREAR PRESTAMO
+        private void buttonPrestamosCrear_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OracleConnection conexion;
+                OracleCommand comando;
+
+                conexion = new OracleConnection();
+                conexion.ConnectionString =
+                    "Persist Security Info=False; " +
+                    "Data Source=172.18.35.50/bddam; User ID=BD_DMARCO; Password=47030791T";
+                conexion.Open();
+
+                comando = new OracleCommand();
+                comando.Connection = conexion;
+
+                comando.CommandText = "INSERT INTO Prestamo VALUES " +
+                "'" + textBoxPrestamosPR + "'," +
+                "'" + textBoxPrestamosFechaRecogida + "'," +
+                "'" + textBoxPrestamosFechaEntrega + "'," +
+                "'" + textBoxPrestamosUsuario + "'," +
+                "'" + textBoxPrestamosEmpleado + "'," +
+                "'" + textBoxPrestamosLibro + "'";
+
+                comando.ExecuteNonQuery();
+
+                conexion.Close();
+                
+                cargarPrestamos();
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show(
+                    "Error al crear Préstamo: " + ex.Message,
+                    "Aplicación de conexión a base de datos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         // BOTON CARGAR LIBROS
-        private void buttonCargarDatos_Click_1(object sender, EventArgs e)
+        private void buttonCargarLibros_Click(object sender, EventArgs e)
         {
             cargarEstilos();
             cargarAutores();
             cargarCategorias();
+            MessageBox.Show("Libros cargados con éxito",
+                "Aplicación de base de datos",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
         // BOTON CARGAR PERSONAS
         private void buttonCargarPersonas_Click(object sender, EventArgs e)
         {
@@ -909,13 +1339,19 @@ namespace ADO
                 "Aplicación de base de datos",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
+        // BOTON CARGAR PRESTAMOS
+        private void buttonCargarPrestamos_Click(object sender, EventArgs e)
+        {
+            cargarPrestamos();
+            MessageBox.Show("Préstamos cargados con éxito",
+                "Aplicación de base de datos",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
         // BOTON CERRAR
         private void buttonClose_Click(object sender, EventArgs e)
         {
             Close();
         }
-
         // BOTON ACERCA DE
         private void buttonAcercaDe_Click(object sender, EventArgs e)
         {
@@ -923,11 +1359,6 @@ namespace ADO
 
             formAcerca = new FormAcercaDe();
             formAcerca.ShowDialog();
-        }
-
-        private void buttonCargarPrestamos_Click(object sender, EventArgs e)
-        {
-            cargarPrestamos();
         }
     }
 }

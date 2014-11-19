@@ -40,7 +40,7 @@ US# VARCHAR2(4),
 NombreUsuario VARCHAR2(10),
 ApellidosUsuario VARCHAR2(20),
 DireccionUsuario VARCHAR2(20),
-LibrosPrestados NUMBER(1) CHECK(number >= 0 AND number <= 4),
+LibrosPrestados NUMBER(1) CHECK(LibrosPrestados >= 0 AND LibrosPrestados <= 4),
 CONSTRAINT PK_Usuario_US# PRIMARY KEY (US#)
 );
 CREATE TABLE Empleado (

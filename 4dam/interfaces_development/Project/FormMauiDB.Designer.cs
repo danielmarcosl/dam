@@ -138,19 +138,31 @@
             this.columnHeaderApellidosUsuario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderDireccionUsuario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPagePrestamo = new System.Windows.Forms.TabPage();
+            this.buttonPrestamosCrear = new System.Windows.Forms.Button();
+            this.buttonPrestamosActualizar = new System.Windows.Forms.Button();
+            this.textBoxPrestamosFechaEntrega = new System.Windows.Forms.TextBox();
+            this.labelPrestamosFechaEntrega = new System.Windows.Forms.Label();
+            this.textBoxPrestamosPR = new System.Windows.Forms.TextBox();
+            this.labelPrestamosPR = new System.Windows.Forms.Label();
+            this.textBoxPrestamosFechaRecogida = new System.Windows.Forms.TextBox();
+            this.labelPrestamosFechaRecogida = new System.Windows.Forms.Label();
             this.listViewPrestamos = new System.Windows.Forms.ListView();
-            this.columnHeaderPrestamoPE = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderPrestamoPR = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderPrestamoRecogida = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderPrestamoEntrega = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderPrestamoUsuario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderPrestamoLibro = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderPrestamoEmpleado = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonCargarPrestamos = new System.Windows.Forms.Button();
-            this.labelUsuario = new System.Windows.Forms.Label();
-            this.comboBoxAutor = new System.Windows.Forms.ComboBox();
+            this.labelPrestamosEmpleado = new System.Windows.Forms.Label();
+            this.labelPrestamosLibro = new System.Windows.Forms.Label();
+            this.labelPrestamosUsuario = new System.Windows.Forms.Label();
             this.imageListAplicacion = new System.Windows.Forms.ImageList(this.components);
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonAcercaDe = new System.Windows.Forms.Button();
+            this.textBoxPrestamosUsuario = new System.Windows.Forms.TextBox();
+            this.textBoxPrestamosEmpleado = new System.Windows.Forms.TextBox();
+            this.textBoxPrestamosLibro = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPageLibros.SuspendLayout();
             this.tabControl3.SuspendLayout();
@@ -172,7 +184,9 @@
             this.columnHeaderNombreEmpleado,
             this.columnHeaderApellidosEmpleado,
             this.columnHeaderTurnoEmpleado});
+            this.listViewEmpleado.FullRowSelect = true;
             this.listViewEmpleado.Location = new System.Drawing.Point(5, 6);
+            this.listViewEmpleado.MultiSelect = false;
             this.listViewEmpleado.Name = "listViewEmpleado";
             this.listViewEmpleado.Size = new System.Drawing.Size(682, 218);
             this.listViewEmpleado.TabIndex = 3;
@@ -316,6 +330,7 @@
             this.buttonCargarLibros.TabIndex = 9;
             this.buttonCargarLibros.Text = "Cargar Libros";
             this.buttonCargarLibros.UseVisualStyleBackColor = false;
+            this.buttonCargarLibros.Click += new System.EventHandler(this.buttonCargarLibros_Click);
             // 
             // tabControl3
             // 
@@ -367,6 +382,7 @@
             this.buttonCategoriaBorrar.TabIndex = 63;
             this.buttonCategoriaBorrar.Text = "Borrar";
             this.buttonCategoriaBorrar.UseVisualStyleBackColor = true;
+            this.buttonCategoriaBorrar.Click += new System.EventHandler(this.buttonCategoriaBorrar_Click);
             // 
             // buttonCategoriaCrear
             // 
@@ -376,6 +392,7 @@
             this.buttonCategoriaCrear.TabIndex = 62;
             this.buttonCategoriaCrear.Text = "Crear";
             this.buttonCategoriaCrear.UseVisualStyleBackColor = true;
+            this.buttonCategoriaCrear.Click += new System.EventHandler(this.buttonCategoriaCrear_Click);
             // 
             // buttonCategoriaActualizar
             // 
@@ -385,6 +402,7 @@
             this.buttonCategoriaActualizar.TabIndex = 61;
             this.buttonCategoriaActualizar.Text = "Actualizar";
             this.buttonCategoriaActualizar.UseVisualStyleBackColor = true;
+            this.buttonCategoriaActualizar.Click += new System.EventHandler(this.buttonCategoriaActualizar_Click);
             // 
             // labelCategoriaAutor
             // 
@@ -477,7 +495,9 @@
             this.listViewCategoria.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderCategoriaLV,
             this.columnHeaderCountCategoria});
+            this.listViewCategoria.FullRowSelect = true;
             this.listViewCategoria.Location = new System.Drawing.Point(3, 228);
+            this.listViewCategoria.MultiSelect = false;
             this.listViewCategoria.Name = "listViewCategoria";
             this.listViewCategoria.Size = new System.Drawing.Size(223, 168);
             this.listViewCategoria.TabIndex = 24;
@@ -502,16 +522,15 @@
             this.columnHeaderFechaCategoria,
             this.columnHeaderEditorialCategoria,
             this.columnHeaderAutorCategoria});
+            this.listViewCategoriaLibro.FullRowSelect = true;
             this.listViewCategoriaLibro.Location = new System.Drawing.Point(3, 6);
+            this.listViewCategoriaLibro.MultiSelect = false;
             this.listViewCategoriaLibro.Name = "listViewCategoriaLibro";
             this.listViewCategoriaLibro.Size = new System.Drawing.Size(682, 218);
             this.listViewCategoriaLibro.TabIndex = 3;
             this.listViewCategoriaLibro.UseCompatibleStateImageBehavior = false;
             this.listViewCategoriaLibro.View = System.Windows.Forms.View.Details;
             this.listViewCategoriaLibro.SelectedIndexChanged += new System.EventHandler(this.listViewCategoriaLibro_SelectedIndexChanged);
-            this.listViewCategoriaLibro.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
-            this.listViewCategoriaLibro.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
-            this.listViewCategoriaLibro.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
             // columnHeaderLICategoria
             // 
@@ -573,6 +592,7 @@
             this.buttonEstiloBorrar.TabIndex = 50;
             this.buttonEstiloBorrar.Text = "Borrar";
             this.buttonEstiloBorrar.UseVisualStyleBackColor = true;
+            this.buttonEstiloBorrar.Click += new System.EventHandler(this.buttonEstiloBorrar_Click);
             // 
             // buttonEstiloCrear
             // 
@@ -582,6 +602,7 @@
             this.buttonEstiloCrear.TabIndex = 49;
             this.buttonEstiloCrear.Text = "Crear";
             this.buttonEstiloCrear.UseVisualStyleBackColor = true;
+            this.buttonEstiloCrear.Click += new System.EventHandler(this.buttonEstiloCrear_Click);
             // 
             // buttonEstiloActualizar
             // 
@@ -591,6 +612,7 @@
             this.buttonEstiloActualizar.TabIndex = 48;
             this.buttonEstiloActualizar.Text = "Actualizar";
             this.buttonEstiloActualizar.UseVisualStyleBackColor = true;
+            this.buttonEstiloActualizar.Click += new System.EventHandler(this.buttonEstiloActualizar_Click);
             // 
             // labelEstiloAutor
             // 
@@ -683,7 +705,9 @@
             this.listViewEstilo.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderEstiloLV,
             this.columnHeaderCountEstilo});
+            this.listViewEstilo.FullRowSelect = true;
             this.listViewEstilo.Location = new System.Drawing.Point(3, 228);
+            this.listViewEstilo.MultiSelect = false;
             this.listViewEstilo.Name = "listViewEstilo";
             this.listViewEstilo.Size = new System.Drawing.Size(223, 168);
             this.listViewEstilo.TabIndex = 25;
@@ -708,7 +732,9 @@
             this.columnHeaderFechaEstilo,
             this.columnHeaderEditorialEstilo,
             this.columnHeaderAutorEstilo});
+            this.listViewEstiloLibro.FullRowSelect = true;
             this.listViewEstiloLibro.Location = new System.Drawing.Point(3, 6);
+            this.listViewEstiloLibro.MultiSelect = false;
             this.listViewEstiloLibro.Name = "listViewEstiloLibro";
             this.listViewEstiloLibro.Size = new System.Drawing.Size(682, 218);
             this.listViewEstiloLibro.TabIndex = 24;
@@ -774,6 +800,7 @@
             this.buttonAutorBorrar.TabIndex = 37;
             this.buttonAutorBorrar.Text = "Borrar";
             this.buttonAutorBorrar.UseVisualStyleBackColor = true;
+            this.buttonAutorBorrar.Click += new System.EventHandler(this.buttonAutorBorrar_Click);
             // 
             // buttonAutorCrear
             // 
@@ -783,6 +810,7 @@
             this.buttonAutorCrear.TabIndex = 36;
             this.buttonAutorCrear.Text = "Crear";
             this.buttonAutorCrear.UseVisualStyleBackColor = true;
+            this.buttonAutorCrear.Click += new System.EventHandler(this.buttonAutorCrear_Click);
             // 
             // buttonAutorActualizar
             // 
@@ -792,6 +820,7 @@
             this.buttonAutorActualizar.TabIndex = 35;
             this.buttonAutorActualizar.Text = "Actualizar";
             this.buttonAutorActualizar.UseVisualStyleBackColor = true;
+            this.buttonAutorActualizar.Click += new System.EventHandler(this.buttonAutorActualizar_Click);
             // 
             // labelAutorEditorial
             // 
@@ -867,7 +896,9 @@
             this.listViewAutores.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderAutorLV,
             this.columnHeaderCountAutor});
+            this.listViewAutores.FullRowSelect = true;
             this.listViewAutores.Location = new System.Drawing.Point(3, 228);
+            this.listViewAutores.MultiSelect = false;
             this.listViewAutores.Name = "listViewAutores";
             this.listViewAutores.Size = new System.Drawing.Size(223, 168);
             this.listViewAutores.TabIndex = 26;
@@ -891,7 +922,9 @@
             this.columnHeaderNombreAutor,
             this.columnHeaderFechaAutor,
             this.columnHeaderEditorialAutor});
+            this.listViewAutoresLibro.FullRowSelect = true;
             this.listViewAutoresLibro.Location = new System.Drawing.Point(3, 6);
+            this.listViewAutoresLibro.MultiSelect = false;
             this.listViewAutoresLibro.Name = "listViewAutoresLibro";
             this.listViewAutoresLibro.Size = new System.Drawing.Size(682, 218);
             this.listViewAutoresLibro.TabIndex = 24;
@@ -1149,7 +1182,9 @@
             this.columnHeaderNombreUsuario,
             this.columnHeaderApellidosUsuario,
             this.columnHeaderDireccionUsuario});
+            this.listViewUsuario.FullRowSelect = true;
             this.listViewUsuario.Location = new System.Drawing.Point(5, 6);
+            this.listViewUsuario.MultiSelect = false;
             this.listViewUsuario.Name = "listViewUsuario";
             this.listViewUsuario.Size = new System.Drawing.Size(682, 218);
             this.listViewUsuario.TabIndex = 10;
@@ -1185,10 +1220,22 @@
             this.tabPagePrestamo.BackColor = System.Drawing.Color.Gainsboro;
             this.tabPagePrestamo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.tabPagePrestamo.CausesValidation = false;
+            this.tabPagePrestamo.Controls.Add(this.buttonPrestamosCrear);
+            this.tabPagePrestamo.Controls.Add(this.buttonPrestamosActualizar);
+            this.tabPagePrestamo.Controls.Add(this.textBoxPrestamosFechaEntrega);
+            this.tabPagePrestamo.Controls.Add(this.labelPrestamosFechaEntrega);
+            this.tabPagePrestamo.Controls.Add(this.textBoxPrestamosLibro);
+            this.tabPagePrestamo.Controls.Add(this.textBoxPrestamosEmpleado);
+            this.tabPagePrestamo.Controls.Add(this.textBoxPrestamosUsuario);
+            this.tabPagePrestamo.Controls.Add(this.textBoxPrestamosPR);
+            this.tabPagePrestamo.Controls.Add(this.labelPrestamosPR);
+            this.tabPagePrestamo.Controls.Add(this.textBoxPrestamosFechaRecogida);
+            this.tabPagePrestamo.Controls.Add(this.labelPrestamosFechaRecogida);
             this.tabPagePrestamo.Controls.Add(this.listViewPrestamos);
             this.tabPagePrestamo.Controls.Add(this.buttonCargarPrestamos);
-            this.tabPagePrestamo.Controls.Add(this.labelUsuario);
-            this.tabPagePrestamo.Controls.Add(this.comboBoxAutor);
+            this.tabPagePrestamo.Controls.Add(this.labelPrestamosEmpleado);
+            this.tabPagePrestamo.Controls.Add(this.labelPrestamosLibro);
+            this.tabPagePrestamo.Controls.Add(this.labelPrestamosUsuario);
             this.tabPagePrestamo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPagePrestamo.ImageIndex = 2;
             this.tabPagePrestamo.Location = new System.Drawing.Point(4, 39);
@@ -1201,34 +1248,110 @@
             this.tabPagePrestamo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.tabPagePrestamo.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
             // 
+            // buttonPrestamosCrear
+            // 
+            this.buttonPrestamosCrear.Location = new System.Drawing.Point(567, 343);
+            this.buttonPrestamosCrear.Name = "buttonPrestamosCrear";
+            this.buttonPrestamosCrear.Size = new System.Drawing.Size(113, 34);
+            this.buttonPrestamosCrear.TabIndex = 14;
+            this.buttonPrestamosCrear.Text = "Crear";
+            this.buttonPrestamosCrear.UseVisualStyleBackColor = true;
+            this.buttonPrestamosCrear.Click += new System.EventHandler(this.buttonPrestamosCrear_Click);
+            // 
+            // buttonPrestamosActualizar
+            // 
+            this.buttonPrestamosActualizar.Location = new System.Drawing.Point(567, 303);
+            this.buttonPrestamosActualizar.Name = "buttonPrestamosActualizar";
+            this.buttonPrestamosActualizar.Size = new System.Drawing.Size(113, 34);
+            this.buttonPrestamosActualizar.TabIndex = 13;
+            this.buttonPrestamosActualizar.Text = "Actualizar";
+            this.buttonPrestamosActualizar.UseVisualStyleBackColor = true;
+            this.buttonPrestamosActualizar.Click += new System.EventHandler(this.buttonPrestamosActualizar_Click);
+            // 
+            // textBoxPrestamosFechaEntrega
+            // 
+            this.textBoxPrestamosFechaEntrega.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxPrestamosFechaEntrega.Location = new System.Drawing.Point(443, 370);
+            this.textBoxPrestamosFechaEntrega.Name = "textBoxPrestamosFechaEntrega";
+            this.textBoxPrestamosFechaEntrega.Size = new System.Drawing.Size(100, 33);
+            this.textBoxPrestamosFechaEntrega.TabIndex = 12;
+            // 
+            // labelPrestamosFechaEntrega
+            // 
+            this.labelPrestamosFechaEntrega.AutoSize = true;
+            this.labelPrestamosFechaEntrega.Location = new System.Drawing.Point(295, 373);
+            this.labelPrestamosFechaEntrega.Name = "labelPrestamosFechaEntrega";
+            this.labelPrestamosFechaEntrega.Size = new System.Drawing.Size(132, 26);
+            this.labelPrestamosFechaEntrega.TabIndex = 11;
+            this.labelPrestamosFechaEntrega.Text = "Fecha Entrega";
+            // 
+            // textBoxPrestamosPR
+            // 
+            this.textBoxPrestamosPR.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxPrestamosPR.Location = new System.Drawing.Point(443, 272);
+            this.textBoxPrestamosPR.Name = "textBoxPrestamosPR";
+            this.textBoxPrestamosPR.Size = new System.Drawing.Size(100, 33);
+            this.textBoxPrestamosPR.TabIndex = 12;
+            // 
+            // labelPrestamosPR
+            // 
+            this.labelPrestamosPR.AutoSize = true;
+            this.labelPrestamosPR.Location = new System.Drawing.Point(383, 275);
+            this.labelPrestamosPR.Name = "labelPrestamosPR";
+            this.labelPrestamosPR.Size = new System.Drawing.Size(44, 26);
+            this.labelPrestamosPR.TabIndex = 11;
+            this.labelPrestamosPR.Text = "PR#";
+            // 
+            // textBoxPrestamosFechaRecogida
+            // 
+            this.textBoxPrestamosFechaRecogida.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxPrestamosFechaRecogida.Location = new System.Drawing.Point(443, 321);
+            this.textBoxPrestamosFechaRecogida.Name = "textBoxPrestamosFechaRecogida";
+            this.textBoxPrestamosFechaRecogida.Size = new System.Drawing.Size(100, 33);
+            this.textBoxPrestamosFechaRecogida.TabIndex = 12;
+            // 
+            // labelPrestamosFechaRecogida
+            // 
+            this.labelPrestamosFechaRecogida.AutoSize = true;
+            this.labelPrestamosFechaRecogida.Location = new System.Drawing.Point(283, 324);
+            this.labelPrestamosFechaRecogida.Name = "labelPrestamosFechaRecogida";
+            this.labelPrestamosFechaRecogida.Size = new System.Drawing.Size(144, 26);
+            this.labelPrestamosFechaRecogida.TabIndex = 11;
+            this.labelPrestamosFechaRecogida.Text = "Fecha Recogida";
+            // 
             // listViewPrestamos
             // 
             this.listViewPrestamos.BackColor = System.Drawing.Color.WhiteSmoke;
             this.listViewPrestamos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeaderPrestamoPE,
+            this.columnHeaderPrestamoPR,
             this.columnHeaderPrestamoRecogida,
             this.columnHeaderPrestamoEntrega,
             this.columnHeaderPrestamoUsuario,
             this.columnHeaderPrestamoLibro,
             this.columnHeaderPrestamoEmpleado});
+            this.listViewPrestamos.FullRowSelect = true;
             this.listViewPrestamos.Location = new System.Drawing.Point(5, 42);
+            this.listViewPrestamos.MultiSelect = false;
             this.listViewPrestamos.Name = "listViewPrestamos";
             this.listViewPrestamos.Size = new System.Drawing.Size(682, 203);
             this.listViewPrestamos.TabIndex = 10;
             this.listViewPrestamos.UseCompatibleStateImageBehavior = false;
             this.listViewPrestamos.View = System.Windows.Forms.View.Details;
+            this.listViewPrestamos.SelectedIndexChanged += new System.EventHandler(this.listViewPrestamos_SelectedIndexChanged);
             // 
-            // columnHeaderPrestamoPE
+            // columnHeaderPrestamoPR
             // 
-            this.columnHeaderPrestamoPE.Text = "PE#";
+            this.columnHeaderPrestamoPR.Text = "PR#";
             // 
             // columnHeaderPrestamoRecogida
             // 
             this.columnHeaderPrestamoRecogida.Text = "Recogida";
+            this.columnHeaderPrestamoRecogida.Width = 99;
             // 
             // columnHeaderPrestamoEntrega
             // 
             this.columnHeaderPrestamoEntrega.Text = "Entrega";
+            this.columnHeaderPrestamoEntrega.Width = 108;
             // 
             // columnHeaderPrestamoUsuario
             // 
@@ -1258,25 +1381,35 @@
             this.buttonCargarPrestamos.UseVisualStyleBackColor = false;
             this.buttonCargarPrestamos.Click += new System.EventHandler(this.buttonCargarPrestamos_Click);
             // 
-            // labelUsuario
+            // labelPrestamosEmpleado
             // 
-            this.labelUsuario.AutoSize = true;
-            this.labelUsuario.Location = new System.Drawing.Point(64, 333);
-            this.labelUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelUsuario.Name = "labelUsuario";
-            this.labelUsuario.Size = new System.Drawing.Size(77, 26);
-            this.labelUsuario.TabIndex = 0;
-            this.labelUsuario.Text = "Usuario";
+            this.labelPrestamosEmpleado.AutoSize = true;
+            this.labelPrestamosEmpleado.Location = new System.Drawing.Point(8, 328);
+            this.labelPrestamosEmpleado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelPrestamosEmpleado.Name = "labelPrestamosEmpleado";
+            this.labelPrestamosEmpleado.Size = new System.Drawing.Size(97, 26);
+            this.labelPrestamosEmpleado.TabIndex = 0;
+            this.labelPrestamosEmpleado.Text = "Empleado";
             // 
-            // comboBoxAutor
+            // labelPrestamosLibro
             // 
-            this.comboBoxAutor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxAutor.FormattingEnabled = true;
-            this.comboBoxAutor.Location = new System.Drawing.Point(149, 330);
-            this.comboBoxAutor.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBoxAutor.Name = "comboBoxAutor";
-            this.comboBoxAutor.Size = new System.Drawing.Size(147, 34);
-            this.comboBoxAutor.TabIndex = 1;
+            this.labelPrestamosLibro.AutoSize = true;
+            this.labelPrestamosLibro.Location = new System.Drawing.Point(50, 388);
+            this.labelPrestamosLibro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelPrestamosLibro.Name = "labelPrestamosLibro";
+            this.labelPrestamosLibro.Size = new System.Drawing.Size(55, 26);
+            this.labelPrestamosLibro.TabIndex = 0;
+            this.labelPrestamosLibro.Text = "Libro";
+            // 
+            // labelPrestamosUsuario
+            // 
+            this.labelPrestamosUsuario.AutoSize = true;
+            this.labelPrestamosUsuario.Location = new System.Drawing.Point(28, 268);
+            this.labelPrestamosUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelPrestamosUsuario.Name = "labelPrestamosUsuario";
+            this.labelPrestamosUsuario.Size = new System.Drawing.Size(77, 26);
+            this.labelPrestamosUsuario.TabIndex = 0;
+            this.labelPrestamosUsuario.Text = "Usuario";
             // 
             // imageListAplicacion
             // 
@@ -1323,6 +1456,30 @@
             this.buttonAcercaDe.Text = "?";
             this.buttonAcercaDe.UseVisualStyleBackColor = false;
             this.buttonAcercaDe.Click += new System.EventHandler(this.buttonAcercaDe_Click);
+            // 
+            // textBoxPrestamosUsuario
+            // 
+            this.textBoxPrestamosUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxPrestamosUsuario.Location = new System.Drawing.Point(112, 265);
+            this.textBoxPrestamosUsuario.Name = "textBoxPrestamosUsuario";
+            this.textBoxPrestamosUsuario.Size = new System.Drawing.Size(144, 33);
+            this.textBoxPrestamosUsuario.TabIndex = 12;
+            // 
+            // textBoxPrestamosEmpleado
+            // 
+            this.textBoxPrestamosEmpleado.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxPrestamosEmpleado.Location = new System.Drawing.Point(112, 321);
+            this.textBoxPrestamosEmpleado.Name = "textBoxPrestamosEmpleado";
+            this.textBoxPrestamosEmpleado.Size = new System.Drawing.Size(144, 33);
+            this.textBoxPrestamosEmpleado.TabIndex = 12;
+            // 
+            // textBoxPrestamosLibro
+            // 
+            this.textBoxPrestamosLibro.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxPrestamosLibro.Location = new System.Drawing.Point(112, 385);
+            this.textBoxPrestamosLibro.Name = "textBoxPrestamosLibro";
+            this.textBoxPrestamosLibro.Size = new System.Drawing.Size(144, 33);
+            this.textBoxPrestamosLibro.TabIndex = 12;
             // 
             // FormMauiDB
             // 
@@ -1386,8 +1543,7 @@
         private System.Windows.Forms.Button buttonActualizarEmpleado;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Button buttonAcercaDe;
-        private System.Windows.Forms.Label labelUsuario;
-        private System.Windows.Forms.ComboBox comboBoxAutor;
+        private System.Windows.Forms.Label labelPrestamosUsuario;
         private System.Windows.Forms.TabPage tabPagePrestamo;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPageEmpleados;
@@ -1482,12 +1638,25 @@
         private System.Windows.Forms.TextBox textBoxCategoriaEditorial;
         private System.Windows.Forms.Label labelCategoriaLI;
         private System.Windows.Forms.ListView listViewPrestamos;
-        private System.Windows.Forms.ColumnHeader columnHeaderPrestamoPE;
+        private System.Windows.Forms.ColumnHeader columnHeaderPrestamoPR;
         private System.Windows.Forms.ColumnHeader columnHeaderPrestamoRecogida;
         private System.Windows.Forms.ColumnHeader columnHeaderPrestamoEntrega;
         private System.Windows.Forms.ColumnHeader columnHeaderPrestamoUsuario;
         private System.Windows.Forms.ColumnHeader columnHeaderPrestamoLibro;
         private System.Windows.Forms.ColumnHeader columnHeaderPrestamoEmpleado;
+        private System.Windows.Forms.Label labelPrestamosLibro;
+        private System.Windows.Forms.TextBox textBoxPrestamosFechaEntrega;
+        private System.Windows.Forms.Label labelPrestamosFechaEntrega;
+        private System.Windows.Forms.TextBox textBoxPrestamosPR;
+        private System.Windows.Forms.Label labelPrestamosPR;
+        private System.Windows.Forms.TextBox textBoxPrestamosFechaRecogida;
+        private System.Windows.Forms.Label labelPrestamosFechaRecogida;
+        private System.Windows.Forms.Label labelPrestamosEmpleado;
+        private System.Windows.Forms.Button buttonPrestamosCrear;
+        private System.Windows.Forms.Button buttonPrestamosActualizar;
+        private System.Windows.Forms.TextBox textBoxPrestamosLibro;
+        private System.Windows.Forms.TextBox textBoxPrestamosEmpleado;
+        private System.Windows.Forms.TextBox textBoxPrestamosUsuario;
 
     }
 }
