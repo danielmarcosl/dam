@@ -14,3 +14,5 @@ D:\Biblioteca\Development\dam\4dam\interfaces_development\Project\obj\x86\Debug\
 D:\Biblioteca\Development\dam\4dam\interfaces_development\Project\obj\x86\Debug\ADO.FormAcercaDe.resources
 D:\Biblioteca\Development\dam\4dam\interfaces_development\Project\obj\x86\Debug\ADO.Properties.Resources.resources
 D:\Biblioteca\Development\dam\4dam\interfaces_development\Project\obj\x86\Debug\ProjectApp.csproj.GenerateResource.Cache
+D:\Biblioteca\Development\dam\4dam\interfaces_development\Project\bin\Debug\ADO.exe
+D:\Biblioteca\Development\dam\4dam\interfaces_development\Project\bin\Debug\ADO.pdb

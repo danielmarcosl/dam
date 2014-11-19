@@ -40,4 +40,3 @@ INSERT INTO Libro VALUES (
 'LI20','World of Warcraft','22/06/2013','ES02','CA06','AU05','ED05');
 INSERT INTO Libro VALUES (
 'LI21','Tempestira','28/08/2014','ES01','CA05','AU05','ED05');
-COMMIT;

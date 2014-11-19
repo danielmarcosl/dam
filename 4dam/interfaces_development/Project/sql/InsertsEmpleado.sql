@@ -6,4 +6,3 @@ INSERT INTO Empleado VALUES (
 'EM03','Kyle','Broflovsky','18:00-22:00');
 INSERT INTO Empleado VALUES (
 'EM04','Eric','Cartman','06:00-10:00');
-COMMIT;

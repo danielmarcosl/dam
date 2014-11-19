@@ -18,4 +18,3 @@ INSERT INTO Usuario VALUES (
 'US09','Fernando','Garcia','Barcelona');
 INSERT INTO Usuario VALUES (
 'US10','Ivan','Lopez','Gijon');
-COMMIT;

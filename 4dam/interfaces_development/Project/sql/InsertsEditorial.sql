@@ -8,4 +8,3 @@ INSERT INTO Editorial VALUES ('ED03','SM',
 'Madrid','G28534204','1977');
 INSERT INTO Editorial VALUES ('ED05','Panini',
 'Barcelona','027019912','1961');
-COMMIT;

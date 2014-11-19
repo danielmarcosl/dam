@@ -7,4 +7,3 @@ DROP TABLE Escribe;
 DROP TABLE Libro;
 DROP TABLE Autor;
 DROP TABLE Editorial;
-COMMIT;
