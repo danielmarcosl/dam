@@ -1,0 +1,3 @@
+C:\Users\Daniel\Development\dam\4dam\interfaces_development\Tests\TestForm1\EditarLibro\obj\x86\Debug\EditarLibro.FormLibro.resources
+C:\Users\Daniel\Development\dam\4dam\interfaces_development\Tests\TestForm1\EditarLibro\obj\x86\Debug\EditarLibro.Properties.Resources.resources
+C:\Users\Daniel\Development\dam\4dam\interfaces_development\Tests\TestForm1\EditarLibro\obj\x86\Debug\EditarLibro.csproj.GenerateResource.Cache

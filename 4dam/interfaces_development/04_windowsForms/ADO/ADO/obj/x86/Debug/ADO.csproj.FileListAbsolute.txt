@@ -12,3 +12,5 @@ D:\Biblioteca\Development\dam\4dam\interfaces_development\04_windowsForms\Formul
 D:\Biblioteca\Development\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO\ADO\obj\x86\Debug\ADO.Form1.resources
 D:\Biblioteca\Development\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO\ADO\obj\x86\Debug\ADO.Properties.Resources.resources
 D:\Biblioteca\Development\dam\4dam\interfaces_development\04_windowsForms\Formulario\ADO\ADO\obj\x86\Debug\ADO.csproj.GenerateResource.Cache
+C:\Users\Daniel\Development\dam\4dam\interfaces_development\04_windowsForms\ADO\ADO\obj\x86\Debug\ADO.exe
+C:\Users\Daniel\Development\dam\4dam\interfaces_development\04_windowsForms\ADO\ADO\obj\x86\Debug\ADO.pdb

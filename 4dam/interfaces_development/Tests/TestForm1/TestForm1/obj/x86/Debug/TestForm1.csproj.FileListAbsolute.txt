@@ -1,0 +1,8 @@
+C:\Users\Daniel\Development\dam\4dam\interfaces_development\Tests\TestForm1\TestForm1\bin\Debug\TestForm1.exe
+C:\Users\Daniel\Development\dam\4dam\interfaces_development\Tests\TestForm1\TestForm1\bin\Debug\TestForm1.pdb
+C:\Users\Daniel\Development\dam\4dam\interfaces_development\Tests\TestForm1\TestForm1\obj\x86\Debug\TestForm1.Form1.resources
+C:\Users\Daniel\Development\dam\4dam\interfaces_development\Tests\TestForm1\TestForm1\obj\x86\Debug\TestForm1.Properties.Resources.resources
+C:\Users\Daniel\Development\dam\4dam\interfaces_development\Tests\TestForm1\TestForm1\obj\x86\Debug\TestForm1.csproj.GenerateResource.Cache
+C:\Users\Daniel\Development\dam\4dam\interfaces_development\Tests\TestForm1\TestForm1\obj\x86\Debug\TestForm1.exe
+C:\Users\Daniel\Development\dam\4dam\interfaces_development\Tests\TestForm1\TestForm1\obj\x86\Debug\TestForm1.pdb
+C:\Users\Daniel\Development\dam\4dam\interfaces_development\Tests\TestForm1\TestForm1\obj\x86\Debug\TestForm1.csprojResolveAssemblyReference.cache

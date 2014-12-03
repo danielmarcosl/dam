@@ -1,0 +1,11 @@
+C:\Users\JoseLuis\documents\visual studio 2010\Projects\WindowsFormsApplicationPrimera\WindowsFormsApplicationRepaso\bin\Debug\WindowsFormsApplicationRepaso.exe
+C:\Users\JoseLuis\documents\visual studio 2010\Projects\WindowsFormsApplicationPrimera\WindowsFormsApplicationRepaso\bin\Debug\WindowsFormsApplicationRepaso.pdb
+C:\Users\JoseLuis\documents\visual studio 2010\Projects\WindowsFormsApplicationPrimera\WindowsFormsApplicationRepaso\obj\x86\Debug\WindowsFormsApplicationRepaso.FormEmpleado.resources
+C:\Users\JoseLuis\documents\visual studio 2010\Projects\WindowsFormsApplicationPrimera\WindowsFormsApplicationRepaso\obj\x86\Debug\WindowsFormsApplicationRepaso.Properties.Resources.resources
+C:\Users\JoseLuis\documents\visual studio 2010\Projects\WindowsFormsApplicationPrimera\WindowsFormsApplicationRepaso\obj\x86\Debug\WindowsFormsApplicationRepaso.csproj.GenerateResource.Cache
+C:\Users\JoseLuis\documents\visual studio 2010\Projects\WindowsFormsApplicationPrimera\WindowsFormsApplicationRepaso\obj\x86\Debug\WindowsFormsApplicationRepaso.exe
+C:\Users\JoseLuis\documents\visual studio 2010\Projects\WindowsFormsApplicationPrimera\WindowsFormsApplicationRepaso\obj\x86\Debug\WindowsFormsApplicationRepaso.pdb
+C:\Users\JoseLuis\documents\visual studio 2010\Projects\WindowsFormsApplicationPrimera\WindowsFormsApplicationRepaso\obj\x86\Debug\WindowsFormsApplicationRepaso.csprojResolveAssemblyReference.cache
+C:\Users\JoseLuis\documents\visual studio 2010\Projects\WindowsFormsApplicationPrimera\WindowsFormsApplicationRepaso\obj\x86\Debug\WindowsFormsApplicationRepaso.FormEmpleadoDetalle.resources
+C:\Users\Daniel\Downloads\WindowsFormsApplicationRepaso\WindowsFormsApplicationRepaso\obj\x86\Debug\WindowsFormsApplicationRepaso.exe
+C:\Users\Daniel\Downloads\WindowsFormsApplicationRepaso\WindowsFormsApplicationRepaso\obj\x86\Debug\WindowsFormsApplicationRepaso.pdb
