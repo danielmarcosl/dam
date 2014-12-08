@@ -94,8 +94,13 @@ namespace TestForm1
 
         private void buttonEditar_Click(object sender, EventArgs e)
         {
-            FormLibro forml;
+            if (comboBoxLibro.SelectedItem.Count != 0)
+            EditarLibro formeditar = new EditarLibro;
 
+
+
+
+            DialogResult resultado = 
             if (
         }
     }

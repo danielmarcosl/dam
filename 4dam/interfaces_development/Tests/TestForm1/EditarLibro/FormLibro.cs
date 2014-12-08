@@ -32,7 +32,6 @@ namespace EditarLibro
 
         private void buttonOk_Click(object sender, EventArgs e)
         {
-            EditarLibro formlibro = new EditarLibro;
             
         }
     }
